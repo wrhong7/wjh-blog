@@ -1,4 +1,5 @@
 import React from "react";
+import firebase from '../../../../src/firebase.js';
 import {Link, Route} from 'react-router-dom';
 
 //here we should export images

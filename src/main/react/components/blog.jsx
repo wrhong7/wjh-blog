@@ -13,10 +13,8 @@ export default class Blog extends React.Component {
       currentItem: '',
       items: []
     }
-
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-
   }
 
   componentDidMount() {
@@ -25,12 +23,18 @@ export default class Blog extends React.Component {
       let items = snapshot.val();
       let newState = [];
       for (let item in items) {
+        let stringLineBreakAdded = items[item].content;
+
         newState.push({
           id: item,
           title: items[item].title,
-          user: items[item].user
+          user: items[item].user,
+          content: stringLineBreakAdded,
+          hashtags: items[item].hashtags,
+          likes: items[item].likes
         });
       }
+
       this.setState({
         items: newState
       });
@@ -60,7 +64,22 @@ export default class Blog extends React.Component {
       currentItem: '',
       username: ''
     })
+  }
 
+  clickLikeButton(itemId, likesCount) {
+    var updates = {};
+    updates[`/items/${itemId}/likes`] = likesCount + 1;
+    return firebase.database().ref().update(updates);
+
+    //here needs to add a function changing the "like" button to "liked section"
+  }
+
+  renderContent(content) {
+    let contentArray = content.split("line-break");
+
+    return contentArray.map(content => {
+      return <div>{content}<br/></div>;
+    });
   }
 
   render() {
@@ -70,37 +89,34 @@ export default class Blog extends React.Component {
       <div className='app'>
         <header>
           <div className="wrapper">
-            <h1>Fun Food Friends</h1>
-
+            <h1>Blog Item</h1>
           </div>
         </header>
         <div className='container'>
-          <section className='add-item'>
-            <form onSubmit={this.handleSubmit}>
-              <input type="text" name="username" placeholder="What's your name?" onChange={this.handleChange} value={this.state.username} />
-              <input type="text" name="currentItem" placeholder="What are you bringing?" onChange={this.handleChange} value={this.state.currentItem} />
-              <button>Add Item</button>
-            </form>
-          </section>
-          <section className='display-item'>
+
             <div className="wrapper">
-              <ul>
+
+
                 {this.state.items.map((item) => {
                   return (
-                    <li key={item.id}>
-                      <h3>{item.title}</h3>
-                      <p>brought by: {item.user}
-                        <button onClick={() => this.removeItem(item.id)}>Remove Item</button>
+                    <div key={item.id}>
+                      <p>{item.title}</p>
+                      {this.renderContent(item.content)}
+                      <p>{item.hashtags}</p>
+                      <p>
+                        brought by: {item.user}
+                        {item.likes} Likes
+                        <button onClick={() => this.clickLikeButton(item.id, item.likes)}>Like</button>
                       </p>
-                    </li>
-                  )
+                    </div>);
                 })}
-              </ul>
+
             </div>
-          </section>
+
         </div>
       </div>
-
     </div>
   }
 }
+
+
