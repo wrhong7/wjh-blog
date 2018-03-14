@@ -6,6 +6,7 @@ import Library from "./components/library";
 import Blog from "./components/blog";
 import Portfolio from "./components/portfolio";
 import "../styles/main.scss"
+import "../styles/navbarWeb.scss"
 
 export default function App ({props}) {
 

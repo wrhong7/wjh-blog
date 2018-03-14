@@ -6,12 +6,17 @@ import {Link, Route} from 'react-router-dom';
 
 export default class NavBar extends React.Component {
   render() {
-    return (<div className="navbar-web-container">
-        <div>Route Paths</div>
-        <a href="/">home</a>
-        <a href="/blog">blog</a>
-        <a href="/library">library</a>
-        <a href="/portfolio">portfolio</a>
+    return (
+      <div className="navbar-web-container">
+        <div className="navbar-web-left">
+          <div className="navbar-web-logo">홍</div>
+        </div>
+        <div className="navbar-web-right">
+          <a className="navbar-portfolio-button" href="/portfolio">portfolio</a>
+          <a className="navbar-library-button" href="/library">library</a>
+          <a className="navbar-blog-button" href="/blog">blog</a>
+          <a className="navbar-home-button" href="/">home</a>
+        </div>
       </div>
     )
   }

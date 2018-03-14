@@ -1,0 +1,35 @@
+body {
+  font-size: 4vmin;
+}
+
+.navbar-web-container {
+  width: 80%;
+  margin: 5vh 10%;
+  overflow-y: auto;
+}
+
+.navbar-web-left {
+  width: 20%;
+  float: left;
+}
+
+.navbar-web-logo {
+  padding: 2vmin;
+  width: 4vmin;
+  border: solid black 0.3vmin;
+}
+
+.navbar-web-right {
+  width: 80%;
+  float: right;
+  font-size: 4vmin;
+  padding: 2vmin;
+}
+
+.navbar-web-right a {
+  width: 30%;
+  float: right;
+  color: black;
+  text-decoration: none;
+}
+
