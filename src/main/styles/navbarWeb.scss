@@ -16,7 +16,7 @@ body {
 .navbar-web-logo {
   padding: 2vmin;
   width: 3vmin;
-  border: solid #494C4E 0.3vmin;
+  border: solid hsl(204, 3%, 30%) 0.3vmin;
   font-size: 3vmin;
 }
 
@@ -30,7 +30,7 @@ body {
 .navbar-web-right a {
   width: 25%;
   float: right;
-  color: #494C4E;
+  color: hsl(204, 3%, 30%);
   text-decoration: none;
   text-align: right;
 }

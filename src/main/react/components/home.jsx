@@ -2,8 +2,6 @@ import React from "react";
 import {Link, Route} from 'react-router-dom';
 import webImage from "../../resources/home-web-image2.jpg"
 
-//here we should export images
-
 export default class Home extends React.Component {
   render() {
     return (

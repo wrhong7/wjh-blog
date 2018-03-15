@@ -26,7 +26,8 @@ export default class Blog extends React.Component {
           user: items[item].user,
           content: stringLineBreakAdded,
           hashtags: items[item].hashtags,
-          likes: items[item].likes
+          likes: items[item].likes,
+          readingTime: items[item].readingTime,
         });
       }
       this.setState({
@@ -50,47 +51,51 @@ export default class Blog extends React.Component {
     });
   }
 
-  // hashTagListCompiling(hashTag) {
-  //   let hashTagArray = this.state.hashTagArray;
-  //   !hashTagArray.includes(hashTag) && hashtagArray.push(hashTag);
-  //   this.setState({hashTagArray});
-  // }
+  parseHashTags(hashtags) {
+    let hashTagArray = hashtags;
+    return hashTagArray.map((hashtag, i) => {
+      return (
+        <span key={i}>{`${hashtag} `}</span>)
+    })
+  }
+
   render() {
     return <div className="landingPageContainer">
-      Hello Blog
-      <div className='app'>
-        <header>
+
+      <div className="article-list">
+        {this.state.items.map((item) => {
+          return (
+            <div key={item.id}>
+              <li>{item.title}</li>
+            </div>);
+        })}
+      </div>
+
+      <div className='article-container'>
+        <section className='display-item'>
           <div className="wrapper">
-            <h1>Blog</h1>
+              {this.state.items.map((item) => {
+                return (
+                  <div key={item.id}>
+                    <div className="blog-post-title">
+                      <span className="blog-post-title">{item.title}</span>
+                      <span className="blog-post-reading-time">{item.readingTime} min read</span>
+                    </div>
+
+                    <div>
+                      {this.parseHashTags(item.hashtags)}
+                    </div>
+
+                    {this.renderContent(item.content)}
+                    <p>
+                      brought by: {item.user}
+                      {item.likes} Likes
+                      <button onClick={() => this.clickLikeButton(item.id, item.likes)}>Like</button>
+                    </p>
+                  </div>);
+              })}
           </div>
-          <div className="article-list">
-            {this.state.items.map((item) => {
-              return (
-                <div key={item.id}>
-                  <li>{item.title}</li>
-                </div>);
-            })}
-          </div>
-        </header>
-        <div className='container'>
-          <section className='display-item'>
-            <div className="wrapper">
-                {this.state.items.map((item) => {
-                  return (
-                    <div key={item.id}>
-                      <p>{item.title}</p>
-                      {this.renderContent(item.content)}
-                      <p>{item.hashtags}</p>
-                      <p>
-                        brought by: {item.user}
-                        {item.likes} Likes
-                        <button onClick={() => this.clickLikeButton(item.id, item.likes)}>Like</button>
-                      </p>
-                    </div>);
-                })}
-            </div>
-          </section>
-        </div>
+        </section>
       </div>
     </div>
   }

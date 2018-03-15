@@ -1,0 +1,31 @@
+.landingPageContainer {
+  width: 80%;
+  overflow-y: auto;
+  margin-left: 5%;
+  margin-right: 15%;
+}
+
+.article-container {
+  width: 70%;
+  float: right;
+}
+
+.article-list {
+  width: 30%;
+  float: right;
+}
+
+.wrapper {
+  //for articles
+  font-size: 3vmin;
+  line-height: 6vmin;
+}
+
+.blog-post-title {
+  font-weight: 700;
+}
+
+.blog-post-reading-time {
+  margin-left: 2vmin;
+  color: hsl(204, 3%, 50%);
+}
