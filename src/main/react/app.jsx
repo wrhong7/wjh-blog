@@ -5,8 +5,11 @@ import NavBar from "./components/navBar";
 import Library from "./components/library";
 import Blog from "./components/blog";
 import Portfolio from "./components/portfolio";
+
+import "../styles/home.scss"
 import "../styles/main.scss"
 import "../styles/navbarWeb.scss"
+import "../resources/home-web-image2.jpg"
 
 export default function App ({props}) {
 

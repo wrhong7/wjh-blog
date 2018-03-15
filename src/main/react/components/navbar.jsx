@@ -15,7 +15,7 @@ export default class NavBar extends React.Component {
           <a className="navbar-portfolio-button" href="/portfolio">portfolio</a>
           <a className="navbar-library-button" href="/library">library</a>
           <a className="navbar-blog-button" href="/blog">blog</a>
-          <a className="navbar-home-button" href="/">home</a>
+          <a className="navbar-home-button" href="/">main</a>
         </div>
       </div>
     )
