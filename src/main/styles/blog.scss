@@ -1,8 +1,9 @@
 .landingPageContainer {
-  width: 80%;
+  width: 70%;
   overflow-y: auto;
-  margin-left: 5%;
+  margin-left: 15%;
   margin-right: 15%;
+  margin-bottom: 20vh;
 }
 
 .article-container {
@@ -10,11 +11,18 @@
   float: right;
 }
 
+.post-summary-stat {
+  width: 100%;
+  color: hsl(204, 3%, 60%);
+}
+
 .article-list {
-  width: 25%;
-  margin-left: 5%;
+  width: 20%;
+  margin-left: 10%;
   float: right;
   font-size: 3vmin;
+  line-height: 6vmin;
+  margin-top: 5vh;
 }
 
 .wrapper {
@@ -40,24 +48,85 @@
 .hashTag {
   width: auto;
   overflow-y: auto;
-  color: hsl(204, 3%, 40%);
+  color: hsl(204, 3%, 60%);
   padding-right: 1vmin;
 }
 
 .blogPostWrapper-short {
   padding-top: 5vmin;
   padding-bottom: 5vmin;
-  height: 30vh;
+  height: 52vh;
   overflow: hidden;
 }
 
 .blogPostWrapper-long {
   padding-top: 5vmin;
-  padding-bottom: 5vmin;
   overflow: hidden;
 }
 
 .post-expand-reduce-button {
   text-align: center;
   cursor: pointer;
+  padding-top: 1.5vmin;
+  padding-bottom: 1vmin;
+  color: hsl(204, 3%, 60%);
+}
+
+.post-likes {
+  float: right;
+}
+
+.post-like-button {
+  margin-right: 1vmin;
+  font-size: 2.8vmin;
+}
+
+.post-like-button:hover {
+  cursor: pointer;
+}
+
+.post-number-of-likes {
+  text-align: right;
+}
+
+.post-separator {
+  width: 100%;
+  font-size: 3vmin;
+  text-align: center;
+}
+
+.blogpost-wrapper {
+  margin-bottom: 5vmin;
+}
+
+.fa-heart {
+  color: #d95e40;
+}
+
+@media screen and (min-width: 1680px) {
+
+  .post-like-button {
+    margin-right: 1vmin;
+    font-size: 1.8vmin;
+  }
+
+  .landingPageContainer {
+    width: 50%;
+    overflow-y: auto;
+    margin-left: 15%;
+    margin-right: 35%;
+  }
+
+  .wrapper {
+    font-size: 2vmin;
+    line-height: 4.5vmin;
+  }
+
+  .article-list {
+    font-size: 2vmin;
+    line-height: 4.5vmin;
+    width: 15%;
+    margin-left: 15%;
+    float: right;
+  }
 }

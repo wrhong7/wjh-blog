@@ -80,15 +80,23 @@ export default class Blog extends React.Component {
   togglePostLength(item) {
     return <div className="post-expand-reduce-button"
                 onClick={() => this.clickExpandOrReduceContentButton(item.id)}>
-      {this.state.expandedPostIds.includes(item.id) ? "less" : "more"}
+      {this.state.expandedPostIds.includes(item.id) ? "less" : "expand"}
     </div>
   }
 
   getAuthorAndLike(item) {
-    return <div>
-      brought by: {item.user}
-      {item.likes} Likes
-      <button onClick={() => this.clickLikeButton(item.id, item.likes)}>Like</button>
+    return <div className="post-summary-stat">
+      <span className="post-source">
+        Source: {item.user}
+      </span>
+      <span className="post-likes">
+        <span className="post-like-button" onClick={() => this.clickLikeButton(item.id, item.likes)}>
+          <i className="fa fa-heart"></i>
+        </span>
+        <span className="post-number-of-likes">
+          {item.likes} Likes
+        </span>
+      </span>
     </div>;
   }
 
@@ -96,27 +104,32 @@ export default class Blog extends React.Component {
     let className = this.state.expandedPostIds.includes(item.id) ?
       "blogPostWrapper-long" : "blogPostWrapper-short";
 
-    return (<div key={item.id}>
+    return (<div key={item.id} className="blogpost-wrapper">
       <div className={className} id={`wrapper-${item.id}`}>
         <div className="blog-post-title">{item.title}</div>
         {this.getBlogSubinfo(item)}
         {this.renderContent(item.content)}
-        {this.getAuthorAndLike(item)}
       </div>
       {this.togglePostLength(item)}
+      {this.getAuthorAndLike(item)}
     </div>)
+  }
+
+  getArticleList() {
+    return this.state.items.map((item) => {
+      return (
+        <div key={item.id}>
+          <li>{item.title}</li>
+        </div>);
+    })
   }
 
   render() {
     return <div className="landingPageContainer">
 
       <div className="article-list">
-        {this.state.items.map((item) => {
-          return (
-            <div key={item.id}>
-              <li>{item.title}</li>
-            </div>);
-        })}
+        Article List
+        {this.getArticleList()}
       </div>
       <div className='article-container'>
         <section className='display-item'>

@@ -3,8 +3,8 @@ body {
 }
 
 .navbar-web-container {
-  width: 90%;
-  margin: 5vh 5%;
+  width: 70%;
+  margin: 5vh 15%;
   overflow-y: auto;
 }
 
@@ -33,5 +33,24 @@ body {
   color: hsl(204, 3%, 30%);
   text-decoration: none;
   text-align: right;
+}
+
+@media screen and (min-width: 1680px) {
+  .navbar-web-container {
+    width: 65%;
+    margin: 5vh 15%;
+    overflow-y: auto;
+  }
+
+  .navbar-web-right {
+    font-size: 2vmin;
+  }
+
+  .navbar-web-logo {
+    padding: 2vmin;
+    width: 2vmin;
+    border: solid #4a4d4f 0.3vmin;
+    font-size: 2vmin;
+  }
 }
 
