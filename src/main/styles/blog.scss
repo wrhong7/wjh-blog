@@ -11,8 +11,10 @@
 }
 
 .article-list {
-  width: 30%;
+  width: 25%;
+  margin-left: 5%;
   float: right;
+  font-size: 3vmin;
 }
 
 .wrapper {
@@ -23,9 +25,39 @@
 
 .blog-post-title {
   font-weight: 700;
+  padding-bottom: 2vmin;
+}
+
+.blog-post-subinfo {
+  padding-bottom: 2vmin;
 }
 
 .blog-post-reading-time {
   margin-left: 2vmin;
   color: hsl(204, 3%, 50%);
+}
+
+.hashTag {
+  width: auto;
+  overflow-y: auto;
+  color: hsl(204, 3%, 40%);
+  padding-right: 1vmin;
+}
+
+.blogPostWrapper-short {
+  padding-top: 5vmin;
+  padding-bottom: 5vmin;
+  height: 30vh;
+  overflow: hidden;
+}
+
+.blogPostWrapper-long {
+  padding-top: 5vmin;
+  padding-bottom: 5vmin;
+  overflow: hidden;
+}
+
+.post-expand-reduce-button {
+  text-align: center;
+  cursor: pointer;
 }

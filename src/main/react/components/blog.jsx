@@ -3,24 +3,28 @@ import firebase from '../../../../src/firebase.js';
 import {Link, Route} from 'react-router-dom';
 
 export default class Blog extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       username: '',
       currentItem: '',
       items: [],
-      hashTagArray: []
+      hashTagArray: [],
+      expandedPostIds: [],
     }
+
+    this.getPost = this.getPost.bind(this);
+    this.clickExpandOrReduceContentButton = this.clickExpandOrReduceContentButton.bind(this);
   }
 
   componentDidMount() {
     const itemsRef = firebase.database().ref('items');
     itemsRef.on('value', (snapshot) => {
       let items = snapshot.val();
-      let newState = [];
+      let newItems = [];
       for (let item in items) {
         let stringLineBreakAdded = items[item].content;
-        newState.push({
+        newItems.push({
           id: item,
           title: items[item].title,
           user: items[item].user,
@@ -30,9 +34,7 @@ export default class Blog extends React.Component {
           readingTime: items[item].readingTime,
         });
       }
-      this.setState({
-        items: newState
-      });
+      this.setState({items: newItems});
     });
   }
 
@@ -55,8 +57,54 @@ export default class Blog extends React.Component {
     let hashTagArray = hashtags;
     return hashTagArray.map((hashtag, i) => {
       return (
-        <span key={i}>{`${hashtag} `}</span>)
+        <span key={i} className="hashTag">{`${hashtag} `}</span>)
     })
+  }
+
+  clickExpandOrReduceContentButton(blogPostID) {
+    let ids = this.state.expandedPostIds;
+    ids.includes(blogPostID) ? ids.splice(ids.indexOf(blogPostID), 1) :
+      ids.push(blogPostID);
+
+    this.setState({expandedPostIds: ids});
+    console.log(this.state)
+  }
+
+  getBlogSubinfo(item) {
+    return <div className="blog-post-subinfo">
+      {this.parseHashTags(item.hashtags)}
+      <span className="blog-post-reading-time">{item.readingTime} min read</span>
+    </div>
+  }
+
+  togglePostLength(item) {
+    return <div className="post-expand-reduce-button"
+                onClick={() => this.clickExpandOrReduceContentButton(item.id)}>
+      {this.state.expandedPostIds.includes(item.id) ? "less" : "more"}
+    </div>
+  }
+
+  getAuthorAndLike(item) {
+    return <div>
+      brought by: {item.user}
+      {item.likes} Likes
+      <button onClick={() => this.clickLikeButton(item.id, item.likes)}>Like</button>
+    </div>;
+  }
+
+  getPost(item) {
+    let className = this.state.expandedPostIds.includes(item.id) ?
+      "blogPostWrapper-long" : "blogPostWrapper-short";
+
+    return (<div key={item.id}>
+      <div className={className} id={`wrapper-${item.id}`}>
+        <div className="blog-post-title">{item.title}</div>
+        {this.getBlogSubinfo(item)}
+        {this.renderContent(item.content)}
+        {this.getAuthorAndLike(item)}
+      </div>
+      {this.togglePostLength(item)}
+    </div>)
   }
 
   render() {
@@ -70,30 +118,10 @@ export default class Blog extends React.Component {
             </div>);
         })}
       </div>
-
       <div className='article-container'>
         <section className='display-item'>
           <div className="wrapper">
-              {this.state.items.map((item) => {
-                return (
-                  <div key={item.id}>
-                    <div className="blog-post-title">
-                      <span className="blog-post-title">{item.title}</span>
-                      <span className="blog-post-reading-time">{item.readingTime} min read</span>
-                    </div>
-
-                    <div>
-                      {this.parseHashTags(item.hashtags)}
-                    </div>
-
-                    {this.renderContent(item.content)}
-                    <p>
-                      brought by: {item.user}
-                      {item.likes} Likes
-                      <button onClick={() => this.clickLikeButton(item.id, item.likes)}>Like</button>
-                    </p>
-                  </div>);
-              })}
+            {this.state.items.map(this.getPost)}
           </div>
         </section>
       </div>
