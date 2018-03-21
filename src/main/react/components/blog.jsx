@@ -67,7 +67,7 @@ export default class Blog extends React.Component {
       ids.push(blogPostID);
 
     this.setState({expandedPostIds: ids});
-    console.log(this.state)
+    console.log(this.state);
   }
 
   getBlogSubinfo(item) {

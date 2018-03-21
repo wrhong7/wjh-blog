@@ -9,7 +9,7 @@ body {
 }
 
 .navbar-web-left {
-  width: 15%;
+  width: auto;
   float: left;
 }
 
@@ -21,14 +21,16 @@ body {
 }
 
 .navbar-web-right {
-  width: 75%;
+  width: auto;
   float: right;
   font-size: 3vmin;
   padding: 2vmin;
 }
 
 .navbar-web-right a {
-  width: 25%;
+  width: auto;
+  padding: 1vmin;
+  margin: 0 1vmin 0 1vmin;
   float: right;
   color: hsl(204, 3%, 30%);
   text-decoration: none;
@@ -53,4 +55,7 @@ body {
     font-size: 2vmin;
   }
 }
+
+
+
 

@@ -1,7 +1,12 @@
 body {
   margin: 0;
   border: solid 1vmin hsl(204, 3%, 30%);
-  font-family: 'Nanum Gothic', sans-serif;
+  //font-family: 'Nanum Gothic', sans-serif;
+  font-family: 'Comfortaa';
   -webkit-font-smoothing: antialiased;
   color: hsl(204, 3%, 30%);
+}
+
+div {
+  cursor: default;
 }

@@ -34,10 +34,11 @@
 .blog-post-title {
   font-weight: 700;
   padding-bottom: 2vmin;
+  padding-bottom: 4vmin;
 }
 
 .blog-post-subinfo {
-  padding-bottom: 2vmin;
+  padding-bottom: 4vmin;
 }
 
 .blog-post-reading-time {
@@ -48,8 +49,12 @@
 .hashTag {
   width: auto;
   overflow-y: auto;
-  color: hsl(204, 3%, 60%);
+  color: #969a9c;
   padding-right: 1vmin;
+  background-color: rgba(0,0,0,.05);
+  margin-right: 1vmin;
+  padding: 1vmin;
+  border-radius: 0.5vmin;
 }
 
 .blogPostWrapper-short {
@@ -129,4 +134,27 @@
     margin-left: 15%;
     float: right;
   }
+}
+
+@media screen and (max-width: 950px) {
+
+  .article-container {
+    width: 100%;
+  }
+
+  .article-list {
+    display: none;
+  }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+  .article-container {
+    width: 100%;
+  }
+
+  .article-list {
+    display: none;
+  }
+
 }
