@@ -23,6 +23,13 @@ export default class Library extends React.Component {
     this.showBookReview = this.showBookReview.bind(this);
   }
 
+  renderContent(content) {
+    let contentArray = content.split("line-break");
+    return contentArray.map((content, index) => {
+      return <div key={`content-${index}`}>{content}<br/><br/></div>;
+    });
+  }
+
   componentDidMount() {
     const libRef = firebase.database().ref('library');
     libRef.on('value', (snapshot) => {
@@ -89,30 +96,33 @@ export default class Library extends React.Component {
                   return (
                     <div className={largeContainer} key={item.id}
                          onMouseEnter={() => this.showBookInfo(item.id)}
-                         onMouseLeave={() => this.showBookInfo(item.id)}>
+                         onMouseLeave={() => this.showBookInfo(item.id)}
+                         onClick={()=> this.showBookReview(item.id)}
+                         >
                       <img className={largeContainerPhotoWidth}
                         src={item.bookImage}
                       />
-                      <div className={className} onClick={()=> this.showBookReview(item.id)}>
-                        <i className="fa fa-star"></i> {item.bookScore} review <i className={`fa fa-chevron-right`}></i>
+                      <div className={className}>
+                        <span className="svg-star">
+                          <i className="fa fa-star"></i>
+                        </span> {item.bookScore} review <i className={`fa fa-chevron-right`}></i>
                       </div>
                       <div className={bookReviewClassName}>
                         <div className="book-title">
                           <span className="book-review-score-section">
-                            <i className="fa fa-star"></i> {item.bookScore}
+                              <i className="fa fa-star"></i> {item.bookScore}
                           </span>
                           <span className="book-review-title-section">
                             {item.bookTitle}
                           </span>
                           <span className="book-review-author-section">
-                             by {item.bookAuthor}
+                            <span className="book-review-by"> by</span> {item.bookAuthor}
                           </span>
                         </div>
                         <div className="book-review">
-                          {item.bookReview}
+                          {this.renderContent(item.bookReview)}
                         </div>
-                        <div className="close-review-section"
-                          onClick={() => {this.showBookReview(item.id)}}>
+                        <div className="close-review-section">
                           Close Review
                         </div>
                       </div>

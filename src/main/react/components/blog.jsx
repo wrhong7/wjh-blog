@@ -1,6 +1,8 @@
 import React from "react";
 import firebase from '../../../../src/firebase.js';
-import {Link, Route} from 'react-router-dom';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
+
+
 
 export default class Blog extends React.Component {
   constructor(props) {

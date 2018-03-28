@@ -1,5 +1,5 @@
 import React from "react";
-import {Link, Route} from 'react-router-dom';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import firebase from "../../../firebase";
 
 //here we should export images
@@ -44,6 +44,7 @@ export default class Portfolio extends React.Component {
         <div className='container'>
           <section className='display-item'>
             <div className="wrapper">
+              <a className="navbar-home-button" href="/portfolio/cureconnect">CureConnect</a>
               <ul>
                 {this.state.items.map((item) => {
                   return (
