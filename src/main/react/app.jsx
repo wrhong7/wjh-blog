@@ -13,7 +13,9 @@ import "../styles/library.scss"
 import "../styles/main.scss"
 import "../styles/navbarWeb.scss"
 import "../styles/portfolio.scss"
+import "../styles/cureconnectpage.scss"
 import "../resources/home-web-image2.jpg"
+import "../resources/proDevMap1.png"
 
 export default function App ({props}) {
 
