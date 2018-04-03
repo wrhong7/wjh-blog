@@ -5,6 +5,7 @@ import NavBar from "./components/navBar";
 import Library from "./components/library";
 import Blog from "./components/blog";
 import Portfolio from "./components/portfolio";
+import Principles from "./components/principles";
 import Cureconnect from "./components/cureconnect.jsx";
 
 import "../styles/blog.scss"
@@ -13,6 +14,7 @@ import "../styles/library.scss"
 import "../styles/main.scss"
 import "../styles/navbarWeb.scss"
 import "../styles/portfolio.scss"
+import "../styles/principles.scss"
 import "../styles/cureconnectpage.scss"
 import "../resources/home-web-image2.jpg"
 import "../resources/proDevMap1.png"
@@ -35,6 +37,10 @@ export default function App ({props}) {
     return <Portfolio/>
   }
 
+  const goToPrinciples = () => {
+    return <Principles/>
+  }
+
   const goToCureConnect = () => {
     return <Cureconnect/>
   }
@@ -47,6 +53,7 @@ export default function App ({props}) {
           <Route exact path="/library" component={goToLibrary}/>
           <Route exact path="/blog" component={goToBlog}/>
           <Route exact path="/portfolio" component={goToPortfolio}/>
+          <Route exact path="/principles" component={goToPrinciples}/>
           <Route exact path="/portfolio/cureconnect" component={goToCureConnect}/>
         </Switch>
     </div>

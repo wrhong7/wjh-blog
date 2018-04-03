@@ -1,3 +1,14 @@
+@media only screen
+and (min-device-width: 1px)
+and (max-device-width: 812px)
+and (orientation: portrait) {
+  #landing-page-photo-size-for-mobile {
+    width: 180%;
+    margin-left: -40%;
+    overflow: hidden;
+  }
+}
+
 .home-intro-container-web {
   width: 80%;
   margin-left: 10%;
@@ -16,10 +27,10 @@
 
 .home-background-container-web {
   width: 70%;
-  height: 100%;
-  overflow-y: hidden;
+  overflow: hidden;
   margin-left: 15%;
   margin-top: 10vmin;
+  margin-bottom: 10vmin;
   opacity: 0.9;
 }
 

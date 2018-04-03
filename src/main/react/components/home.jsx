@@ -10,7 +10,7 @@ export default class Home extends React.Component {
           Hello, my name is Won Jun.<br/> I am a consultant / designer / developer.
         </div>
          <div className="home-background-container-web">
-          <img className="home-image-web" src={webImage}/>
+          <img className="home-image-web" id="landing-page-photo-size-for-mobile" src={webImage}/>
          </div>
       </div>
     )
