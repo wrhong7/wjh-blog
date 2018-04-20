@@ -45,16 +45,16 @@ export default class Principles extends React.Component {
 
           <div className="principles-list">
             <p className="principles-header">Before Going to Bed</p>
-            <p>1. Unless emergency, I am in my bed by 10PM.</p>
+            <p>1. Unless emergency, I go to bed by 10PM.</p>
             <p className="principles-sub-explanation-indent">
-              I can read paper books, GQ or Vogue, or anything on paper, but never smartphones.
+              I can read paper books, GQ, Vogue, or anything on paper, but never smartphones.
             </p>
             <p>
-              2. Reflect today and plan your next day.
+              2. Revisit today and plan your next day in bed.
             </p>
             <p className="principles-sub-explanation-indent">
-              Think and reproduce key good and bad moments of the day. Try to reflect what I could have done better.
-              Leave a strong mental print of these lessons.
+              Think and reproduce key moments of the day. Try to revisit and think what I could have done differently.
+              Leave a mental imprint.
             </p>
             <p className="principles-header">Socializing</p>
             <p>
@@ -62,16 +62,18 @@ export default class Principles extends React.Component {
             </p>
             <p className="principles-sub-explanation-indent">
               It is actually better to Netflix than hanging out with these people.
-              Your energy is limited, and these people take your energy away. You are not their psychiatrist.<br/>
-              <i>Don't ever do this unless this person is truly special to you.</i>
+              Your energy is limited, and these people actually consume your energy a lot more than you think.
+              You are not their psychiatrist.<br/>
+              <i>Don't ever do this unless this person is truly special to you.<br/>
+                You need to stand with them if they are special.</i>
             </p>
             <p>
-              4. Never complain or talk about matters that you have no control over.
+              4. Never complain or talk about matters that you have no control.
             </p>
             <p className="principles-sub-explanation-indent">
-              Don’t ever complain unless you have a solution <i>or</i>
-              you are seeking for a solution that you would like to solve this challenge.<br/>
-              <i>Trump is not going to change his plan because you complain at a bar.</i>
+              Don’t ever complain unless you have a solution <i> unless </i>
+              you are looking for a way to resolve this problem.<br/>
+              <i>Trump is not going to change his plans because you complain at a bar.</i>
             </p>
             <p>
               5. Avoid boring people x 2<br/>
@@ -87,17 +89,15 @@ export default class Principles extends React.Component {
               6. KISS--keep it simple and stupid.
             </p>
             <p className="principles-sub-explanation-indent">
-              Trump’s communication has been more effective since he used third grade vocab.<br/>
-              <i>It’s stupid but works.</i>
+              Richard Feynman has been popular since he explained quantum physics in layman's language.<br/>
+              <i>Stupid but works.</i>
             </p>
             <p>
               7. Never talk about your job or your family.
             </p>
             <p className="principles-sub-explanation-indent">
-              Who wants to hear whether your git push failed or your mom is coming in town? Whose mom is not coming in town?<br/>
+              Who wants to hear whether your git push failed. Think of three exciting things as you brew your morning coffee.<br/>
               <i>Think hard to entertain people. Excite them. Energize them.</i>
-            </p>
-            <p>
             </p>
             <p className="principles-header">
               Facing Difficulties
@@ -106,23 +106,23 @@ export default class Principles extends React.Component {
               8. If there’s a will, there is a solution.
             </p>
             <p className="principles-sub-explanation-indent">
-              There are always ways to solve a problem. What lacks is my perseverance and tolerance.
+              There are always ways to solve problems. What lacks is my perseverance and tolerance.
             </p>
             <p>
-              9. You can think of couple of people who are “street smarts.”
+              9. Close to street smart people. You will soon be one.
             </p>
             <p className="principles-sub-explanation-indent">
-              Be close with them and make sure take a good care of them. They have solutions for everything, from how to break a lease without giving up a penny to how to negotiate your contract.
+              Hang out with street smarts and take a good care of them. They have solutions for everything, from breaking your contract to negotiating your contract.
             </p>
             <p className="principles-header">When you are Hesitant</p>
             <p>
-              10. When you are reluctant, ask yourself, “what do you have to lose?”
+              10. When you are reluctant, ask yourself, “what do I have to lose?”
             </p>
             <p className="principles-sub-explanation-indent">
               If it is something trivial like, your personal pride, time, or effort, then do it. What do you really have to lose?
             </p>
             <p className="principles-sub-explanation-indent">
-              <i>Believe me, I have heard so many regrets of my friends not talking to that cute girl sitting at the cafe,
+              <i>Believe me, I've heard so many regrets of my friends not talking to the cute girl sitting at a cafe,
                 but I haven’t heard the opposite.</i>
             </p>
             <p className="principles-header">
@@ -138,14 +138,15 @@ export default class Principles extends React.Component {
               Surprise them. It is okay to be crazy. Be innovative and become a memorable one.
             </p>
             <p>
-              12. Be a gentleman to everyone if you have to spend time with them.
+              12. Be nice to everyone if you have to spend time with them.
             </p>
             <p className="principles-sub-explanation-indent">
               There are many definitions of being smart and successful.
-              For me, being successful or smart means becoming a high-performer
+              For me, being successful or smart means being a go-getter
               while entertaining and energizing people around you.
-              At times, stressful moments take place, but as long as you are entertaining and energizing 80% of the time,
-              I think people will remember you as a gentleman. <br/>
+              At times, stressful moments take place. That's just part of life.
+              But as long as you are entertaining and energizing 80% of the time,
+              I think people will remember you as a good person. <br/>
               <i>That's the ambitious goal that I am striving for.</i>
             </p>
           </div>

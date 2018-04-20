@@ -6,6 +6,10 @@
   margin-bottom: 20vh;
 }
 
+li:hover {
+  cursor: pointer;
+}
+
 .article-container {
   width: 70%;
   float: right;
@@ -17,8 +21,8 @@
 }
 
 .article-list {
-  width: 20%;
-  margin-left: 10%;
+  width: 30%;
+  margin-left: 0%;
   float: right;
   font-size: 3vmin;
   line-height: 6vmin;
@@ -79,6 +83,7 @@
 
 .post-likes {
   float: right;
+  margin-right: 5%;
 }
 
 .post-like-button {

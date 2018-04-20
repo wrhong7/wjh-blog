@@ -49,9 +49,11 @@ export default class Blog extends React.Component {
   renderContent(content) {
     let contentArray = content.split("line-break");
     return contentArray.map((content, index) => {
-      return <div key={`content-${index}`}>{content}<br/><br/></div>;
+      return <div key={`content-${index}`}>{content}<br/></div>;
     });
   }
+
+
 
   parseHashTags(hashtags) {
     let hashTagArray = hashtags;
@@ -67,7 +69,7 @@ export default class Blog extends React.Component {
       ids.push(blogPostID);
 
     this.setState({expandedPostIds: ids});
-    console.log(this.state);
+    // console.log(this.state);
   }
 
   getBlogSubinfo(item) {
@@ -115,10 +117,17 @@ export default class Blog extends React.Component {
     </div>)
   }
 
+  scrollToBlogPost(id) {
+    // getting the div id there
+    // console.log(`wrapper-${id}`);
+    var element = document.getElementById(`wrapper-${id}`)
+    element.scrollIntoView();
+  }
+
   getArticleList() {
     return this.state.items.map((item) => {
       return (
-        <div key={item.id}>
+        <div key={item.id} onClick={() => this.scrollToBlogPost(item.id)}>
           <li>{item.title}</li>
         </div>);
     })
@@ -128,7 +137,7 @@ export default class Blog extends React.Component {
     return <div className="landingPageContainer">
 
       <div className="article-list">
-        Article List
+        List
         {this.getArticleList()}
       </div>
       <div className='article-container'>
