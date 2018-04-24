@@ -1,0 +1,200 @@
+@media only screen
+and (min-device-width: 1px)
+and (max-device-width: 812px)
+and (orientation: portrait) {
+  .project-item-container-mobile {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 10vmin;
+  }
+
+  #project-image-project1, #project-image-project2, #project-image-project3, #project-image-project4 {
+    margin-bottom: 0;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
+  .cureconnect-demo-photo {
+    width: 100% !important;
+  }
+
+  .project-item-mobile {
+    width: 100% !important;
+  }
+
+  .move-to-project-button {
+    text-align: center;
+  }
+
+  .go-to-page-anchor-container {
+    margin-top: 0vmin !important;
+    float: right;
+  }
+
+}
+
+.project-float-left {
+  float: left;
+  margin-bottom: 20vmin;
+}
+
+.move-to-project-button {
+  font-weight: 400;
+  margin-top: 6vmin;
+  margin-bottom: 4vmin;
+}
+
+.wrapper {
+  overflow-x: hidden;
+}
+
+.landingPageContainer {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #4a4d4f;
+}
+
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.project-CureConnect {
+  overflow-x: hidden;
+}
+
+.project-description-CureConnect {
+  border-right: solid #7c8083 0.1vmin;
+}
+
+.cureconnect-demo-photo {
+  width: 130%;
+}
+
+.project-description-container {
+  color: #969a9c;
+  line-height: 6vmin;
+  font-weight: 200;
+  margin-top: 4vmin;
+  margin-bottom: 4vmin;
+}
+
+.go-to-page-anchor {
+  width: 8vmin;
+  height: 8vmin;
+  text-align: center;
+  border: solid 0.5vmin;
+  border-radius: 100%;
+  line-height: 8vmin;
+  float: left;
+}
+
+.go-to-page-caption {
+  float: left;
+  line-height: 9vmin;
+  margin-left: -0.5vmin;
+  font-weight: 200;
+}
+
+.go-to-page-anchor-container {
+  border-color: #969a9c;
+  color: #969a9c;
+  width: auto;
+  overflow-y: auto;
+  margin-top: 6vmin;
+}
+
+.go-to-page-anchor-container:hover {
+  border-color: #4a4d4f;
+  color: #4a4d4f;
+  cursor: pointer;
+}
+
+.go-to-page-anchor:hover {
+  cursor: pointer;
+}
+
+.go-to-page-caption:hover {
+  cursor: pointer;
+}
+
+.go-to-page-wrapper {
+  width: 7.5vmin;
+  height: 9vmin;
+  overflow-x: hidden;
+}
+
+.go-to-page-wrapper {
+  float: left;
+}
+
+.project-technology {
+  width: 100%;
+  overflow-y: auto;
+  color: #969a9c;
+  font-weight: 200;
+  line-height: 6vmin;
+}
+
+.project-item {
+  font-size: 3vmin;
+  width: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#project-description-project1 {
+  float: left;
+}
+
+#project-description-project1 {
+   width: 40%;
+   font-size: 3vmin;
+ }
+
+#project-image-project1 {
+  width: 60%;
+}
+
+#project-description-project3 {
+  float: left;
+}
+
+#project-description-project3 {
+  width: 40%;
+  font-size: 3vmin;
+}
+
+#project-image-project3 {
+  width: 60%;
+}
+
+#project-description-project2 {
+  float: right;
+  width: 40%;
+}
+
+#project-image-project2 {
+  width: 60%;
+}
+
+#project-image-project2 {
+  margin-left: -20%;
+}
+
+#project-description-project4 {
+  float: right;
+  width: 40%;
+}
+
+#project-image-project4 {
+  width: 60%;
+}
+
+#project-image-project4 {
+  margin-left: -20%;
+}
+

@@ -25,6 +25,9 @@ export default class Portfolio extends React.Component {
           id: item,
           title: portfolioRef[item].projTitle,
           link: portfolioRef[item].projLink,
+          image: portfolioRef[item].projImage,
+          internalHref: portfolioRef[item].href,
+          desc: portfolioRef[item].desc,
         });
       }
       this.setState({
@@ -36,27 +39,33 @@ export default class Portfolio extends React.Component {
   render() {
     return <div className="landingPageContainer">
       <div className='app'>
-        <header>
-          <div className="wrapper">
-            <h1>Portfolio Listing</h1>
-          </div>
-        </header>
         <div className='container'>
-          <section className='display-item'>
-            <div className="wrapper">
-              <a className="navbar-home-button" href="/portfolio/cureconnect">CureConnect</a>
-              <ul>
-                {this.state.items.map((item) => {
-                  return (
-                    <div key={item.id}>
-                      <p>{item.title}</p>
-                      <p>{item.link}</p>
+          {this.state.items.map((item) => {
+            return (
+              <div key={item.id} className={`project-${item.id} project-item project-item-container-mobile`}>
+                <div className="project-float-alternating project-item-mobile"
+                     id={`project-description-${item.id}`}>
+                  <div className="move-to-project-button" href={`${item.internalHref}`}>{item.title}</div>
+                  <div className="project-description-container">{item.desc}</div>
+                  <a className="go-to-page-anchor-container" href={item.internalHref}>
+                    <div className="go-to-page-wrapper">
+                      <div className="go-to-page-anchor">
+                        >
+                      </div>
                     </div>
-                  )
-                })}
-              </ul>
-            </div>
-          </section>
+                    <div className="go-to-page-caption">
+                      read more
+                    </div>
+                  </a>
+                </div>
+                <div className="project-float-left project-item-mobile"
+                     id={`project-image-${item.id}`}>
+                  <img className="cureconnect-demo-photo" id={`project-image-${item.id} project-image-mobile`}
+                       src={`${item.image}`} />
+                </div>
+              </div>
+            )
+          })}
         </div>
       </div>
     </div>

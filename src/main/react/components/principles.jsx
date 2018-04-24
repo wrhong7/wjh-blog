@@ -64,8 +64,7 @@ export default class Principles extends React.Component {
               It is actually better to Netflix than hanging out with these people.
               Your energy is limited, and these people actually consume your energy a lot more than you think.
               You are not their psychiatrist.<br/>
-              <i>Don't ever do this unless this person is truly special to you.<br/>
-                You need to stand with them if they are special.</i>
+              <i>If someone is truly special, then you need to stand with them. It is important to be loyal to someone who you value.</i>
             </p>
             <p>
               4. Never complain or talk about matters that you have no control.

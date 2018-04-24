@@ -12,24 +12,129 @@ export default class Cureconnect extends React.Component {
 
   render() {
     return (
-      <div className="cureconnect-page-wrapper">
+      <div className="cureconnect-page-wrapper" id="cureconnect-page-wrapper-mobile">
         <img className="cureconnect-landingpage-demo"
              onClick={() => this.openCureConnectPage()}
-             src="https://firebasestorage.googleapis.com/v0/b/won-jun-hong-website.appspot.com/o/ccLandingPage.JPG?alt=media&token=4ea16d8b-c23e-4148-a7e8-1274e3232709"/>
+             src="https://firebasestorage.googleapis.com/v0/b/won-jun-hong-website.appspot.com/o/cureconnect%20capture.JPG?alt=media&token=3af6babd-7137-4550-a337-2d716f9f990f"/>
         <div className="visit-cureconnect-instruction">Click above to visit CureConnect</div>
 
-        <div className="cureconnect-content-wrapper">
+        <div className="cureconnect-content-wrapper" id="cureconnect-content-wrapper-mobile">
           <div className="page-header">
             <div className="project-synopsis">
               <div className="synopsis-header">
                 Summary
               </div>
+
+              <div className="synopsis-subheader">
+                Technology
+              </div>
               <div className="synopsis-content">
-                Q: How are we going to resolve nursing shortage in underfunded intercity and rural hospitals?<br/><br/>
+                Html, Javascript, Css, jQuery, Node.js, Firebase, AWS, Twilio
+              </div>
+
+              <div className="synopsis-subheader">
+                Business Idea
+              </div>
+              <div className="synopsis-content">
+                Q: How are we going to resolve nursing shortage in underfunded intercity and rural hospitals?<br/>
                 A: If we can develop a platform that introduces local part-time nursing positions to nurses, that can (1) reduce nurse recruiting costs and (2) alleviate financial constraints on many underfunded intercity and rural hospitals.
               </div>
+
+              <div className="synopsis-subheader">
+                Our Goal
+              </div>
+              <div className="synopsis-content">
+                Building an MVP that helps nurses and hospitals find each other more easily
+              </div>
+
             </div>
           </div>
+
+          <div className="section-divider">
+            ...
+          </div>
+
+          <div className="page-content">
+            <div className="synopsis-subheader">
+              What's my mental model for building an MVP?
+            </div>
+
+            <img src={projectProcessImage} className="cureconnect-image-2" id="cureconnect-image-2-mobile" />
+            <div className="cureconnect-image-desc">We used above mental models for our MVP development</div>
+
+            <div>
+              Please click below to read more about the details of each steps.
+            </div>
+
+            <div className="cureconnect-component-button-container">
+              <div className="cureconnect-component-button">
+                <div className="cureconnect-component-row-1">
+                  <span className="cureconnect-component-row-1-anchor">—</span>
+                  <span className="cureconnect-component-row-1-caption">Step One</span>
+                </div>
+                <div className="cureconnect-component-row-2">
+                  Problem Identification
+                </div>
+                <div className="cureconnect-component-row-3">
+                  Identifying which problem to investigate. How to find people with knowledge and identify problems to solve.
+                </div>
+                <div className="cureconnect-component-row-4">
+                  <div className="cureconnect-component-row-4-anchor"> > </div>
+                  <div className="cureconnect-component-row-4-caption">Read More</div>
+                </div>
+
+              </div>
+              {/*<div className="cureconnect-component-button">*/}
+                {/*<div className="cureconnect-component-caption">*/}
+                  {/*2. Issue & Problem Discovery*/}
+                {/*</div>*/}
+                {/*<div className="cureconnect-component-link">*/}
+                  {/*read more*/}
+                {/*</div>*/}
+              {/*</div>*/}
+              {/*<div className="cureconnect-component-button">*/}
+                {/*<div className="cureconnect-component-caption">*/}
+                  {/*3. Pre-execution*/}
+                {/*</div>*/}
+                {/*<div className="cureconnect-component-link">*/}
+                  {/*read more*/}
+                {/*</div>*/}
+              {/*</div>*/}
+              {/*<div className="cureconnect-component-button">*/}
+                {/*<div className="cureconnect-component-caption">*/}
+                  {/*4. Product Development*/}
+                {/*</div>*/}
+                {/*<div className="cureconnect-component-link">*/}
+                  {/*read more*/}
+                {/*</div>*/}
+              {/*</div>*/}
+              {/*<div className="cureconnect-component-button">*/}
+                {/*<div className="cureconnect-component-caption">*/}
+                  {/*5. User Journey Test*/}
+                {/*</div>*/}
+                {/*<div className="cureconnect-component-link">*/}
+                  {/*read more*/}
+                {/*</div>*/}
+              {/*</div>*/}
+              {/*<div className="cureconnect-component-button">*/}
+                {/*<div className="cureconnect-component-caption">*/}
+                  {/*6. Visit CureConnect*/}
+                {/*</div>*/}
+                {/*<div className="cureconnect-component-link">*/}
+                  {/*read more*/}
+                {/*</div>*/}
+              {/*</div>*/}
+            </div>
+
+          </div>
+
+
+
+
+
+
+
+
 
           <div className="section-divider">
             ...
@@ -41,6 +146,7 @@ export default class Cureconnect extends React.Component {
                 The Problem
               </div>
               <img src={projectProcessImage2} className="cureconnect-image-1" />
+              <div className="cureconnect-image-desc">Underfunded hospitals face above problems</div>
               <div className="synopsis-content">
                 <div className="synopsis-content-paragraph">
                   Despite a common myth, America has enough healthcare providers.
@@ -106,7 +212,7 @@ export default class Cureconnect extends React.Component {
               <div className="synopsis-content-paragraph">
                 This is how I define startup development process.
               </div>
-              <img src={projectProcessImage} className="cureconnect-image-2" />
+              <img src={projectProcessImage} className="cureconnect-image-2" id="cureconnect-image-2-mobile" />
               <div className="project-paragraph-header">
                 Issue Discovery
               </div>
@@ -432,7 +538,7 @@ export default class Cureconnect extends React.Component {
                 Technology Problem
               </div>
 
-              <div className="synopsis-content-paragraph">
+              <div className="synopsis-content-paragraph single-indent">
                 <ul>1. Don’t be obsessed with using a modern stack. Cutting-edge stuff. Should we use React? Let’s take a step further by using Redux. Who cares? I honestly believe you should pay much more attention to talking to people and create a better and more user-friendly product.</ul>
                 <ul>2. Don’t worry about optimization and distributed systems (well now Firebase kinda does that for you, but… don’t worry). We will eventually have to wipe out everything and build a new one with proper backend once we hit 1-10k users. </ul>
                 <ul>3. You have to have a strict deadline and monitor your contributors closely (doesn't mean that you need to micromanage). Self-rule becomes no-rule, and self-imposed deadline becomes no-deadline. Apply pressure if necessary. Nothing gets done without pressure or stress. (Product Stress vs. people stress are different. Try to impose product stress, not the people stress).</ul>
@@ -487,8 +593,11 @@ export default class Cureconnect extends React.Component {
 
               <div className="synopsis-content-paragraph">
                 I am not an expert in user testing, so I had to attend a seminar for this event:
+              </div>
+
+              <div className="synopsis-content-paragraph single-indent">
                 <ul>
-                  1. You need a interviewer and recorder. Both of you guys need to make the interviewee in a comfortable environment.
+                  1. You need an interviewer and recorder. Both of you guys need to make the interviewee in a comfortable environment.
                 </ul>
                 <ul>
                   2. Never use the word user testing or user interview. I know it sounds like a routine in our world, but in many people’s word, those words are big words that may stress interviewees out. Again, you wanna make them comfortable and let them share their true feelings as much as possible.

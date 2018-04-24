@@ -1,3 +1,22 @@
+@media only screen
+and (min-device-width: 1px)
+and (max-device-width: 812px)
+and (orientation: portrait) {
+
+  #cureconnect-page-wrapper-mobile {
+    width: 90vw;
+    margin-left: 5vw;
+  }
+
+  #cureconnect-content-wrapper-mobile {
+    width: 100%;
+  }
+
+  #cureconnect-image-2-mobile {
+    width: 100%;
+  }
+}
+
 li {
   line-height: 2;
   margin: 2vmin 0;
@@ -17,12 +36,27 @@ ul {
   line-height: 6vmin;
 }
 
+.cureconnect-image-desc {
+  color: #7c8083;
+  font-weight: 200;
+  text-align: center;
+  margin-top: 1vmin;
+}
+
+.synopsis-subheader {
+  margin-top: 2vmin;
+}
+
+.synopsis-content {
+  color: #7c8083;
+}
+
 .cureconnect-landingpage-demo {
   width: 95%;
 }
 
 .cureconnect-content-wrapper {
-  width: 65%;
+  width: 100%;
   line-height: 2.5;
 }
 
@@ -62,6 +96,7 @@ ul {
   color: #7c8083;
   margin-top: 1vmin;
   margin-bottom: 1vmin;
+  font-weight: 200;
 }
 
 .cureconnect-image-1 {
@@ -69,7 +104,7 @@ ul {
 }
 
 .cureconnect-image-2 {
-  width: 160%;
+  width: 100%;
 }
 
 .cc-phase1-image {
@@ -109,4 +144,100 @@ ul {
 
 .synopsis-content-paragraph {
   margin: 2.5vmin 0;
+}
+
+.cureconnect-component-button-container {
+  width: 100%;
+}
+
+.cureconnect-component-button {
+  width: 50%;
+  float: left;
+}
+
+.cureconnect-component-link {
+  font-weight: 200;
+  color: #7c8083;
+}
+
+.cureconnect-component-button {
+
+}
+
+.cureconnect-component-row-1 {
+
+}
+
+.cureconnect-component-row-1-anchor {
+  margin-left: 2vmin;
+  margin-right: 2vmin;
+  font-weight: 600;
+}
+
+.cureconnect-component-row-1-caption {
+  color: #7c8083;
+  font-weight: 200;
+}
+
+.cureconnect-component-row-2 {
+  margin-left: 10%;
+}
+
+.cureconnect-component-row-3 {
+  font-weight: 200;
+  margin-left: 10%;
+}
+
+.cureconnect-component-row-4 {
+  width: auto;
+  overflow-y: auto;
+  color: #969a9c;
+  font-weight: 200;
+  margin-left: 10%;
+}
+
+.cureconnect-component-row-4:hover {
+  border: #4a4d4f;
+  color: #4a4d4f;
+  cursor: pointer;
+}
+
+.cureconnect-component-row-4-anchor {
+  float: left;
+  width: 7vmin;
+  height: 7vmin;
+  min-height: 7vmin;
+  line-height: 7vmin;
+  text-align: center;
+  //padding: 0.2vmin;
+  border-radius: 100%;
+  border: solid 0.2vmin #969a9c;
+}
+
+.cureconnect-component-row-4-anchor:hover {
+  float: left;
+  border: solid 0.2vmin;
+  width: 7vmin;
+  height: 7vmin;
+  text-align: center;
+  border-radius: 100%;
+  line-height: 7vmin;
+  cursor: pointer;
+  color: #4a4d4f;
+}
+
+.cureconnect-component-row-4-caption {
+  float: left;
+  padding: 0.5vmin;
+  margin-top: 1.5vmin;
+  margin-left: -2.5vmin;
+  line-height: 3vmin;
+  z-index: 5;
+  background-color: white;
+}
+
+.cureconnect-component-row-4-caption:hover {
+  cursor: pointer;
+  color: #4a4d4f;
+  font-weight: 400;
 }

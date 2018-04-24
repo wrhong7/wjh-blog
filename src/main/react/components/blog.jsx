@@ -73,21 +73,21 @@ export default class Blog extends React.Component {
   }
 
   getBlogSubinfo(item) {
-    return <div className="blog-post-subinfo">
+    return <div className="blog-post-subinfo reduced-font-weight">
       {this.parseHashTags(item.hashtags)}
       <span className="blog-post-reading-time">{item.readingTime} min read</span>
     </div>
   }
 
   togglePostLength(item) {
-    return <div className="post-expand-reduce-button"
+    return <div className="post-expand-reduce-button reduced-font-weight"
                 onClick={() => this.clickExpandOrReduceContentButton(item.id)}>
       {this.state.expandedPostIds.includes(item.id) ? "less" : "expand"}
     </div>
   }
 
   getAuthorAndLike(item) {
-    return <div className="post-summary-stat">
+    return <div className="post-summary-stat reduced-font-weight">
       <span className="post-source">
         Source: {item.user}
       </span>
@@ -136,7 +136,7 @@ export default class Blog extends React.Component {
   render() {
     return <div className="landingPageContainer">
 
-      <div className="article-list">
+      <div className="article-list reduced-font-weight">
         List
         {this.getArticleList()}
       </div>
