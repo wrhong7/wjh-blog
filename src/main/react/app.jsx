@@ -25,7 +25,6 @@ import "../styles/portfolio.scss"
 import "../styles/principles.scss"
 import "../styles/cureconnectpage.scss"
 import "../styles/comedy.scss"
-import "../resources/home-web-image2.jpg"
 import "../resources/proDevMap1.png"
 
 export default function App ({props}) {

@@ -13,11 +13,13 @@ export default class Blog extends React.Component {
       expandedPostIds: [],
     }
 
+
     this.getPost = this.getPost.bind(this);
     this.clickExpandOrReduceContentButton = this.clickExpandOrReduceContentButton.bind(this);
   }
 
   componentDidMount() {
+
     const itemsRef = firebase.database().ref('items');
     itemsRef.on('value', (snapshot) => {
       let items = snapshot.val();

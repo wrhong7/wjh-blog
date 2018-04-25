@@ -1,7 +1,6 @@
 import React from "react";
 import {Link, Route} from 'react-router-dom';
-import firebase from "../../../firebase";
-import blackswan from "../../resources/blackswan.png"
+import firebase from "../../../firebase.js";
 
 //here we should export images
 

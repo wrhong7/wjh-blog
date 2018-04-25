@@ -41,7 +41,6 @@ export default class Blog extends React.Component {
     var updates = {};
     updates[`/comedy/${itemId}/likes`] = likesCount + 1;
     return firebase.database().ref().update(updates);
-
     //here needs to add a function changing the "like" button to "liked section"
   }
 

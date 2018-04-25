@@ -9,6 +9,7 @@ const config = {
   storageBucket: "",
   messagingSenderId: "196476961483"
 };
+
 firebase.initializeApp(config);
 
 export default firebase;
