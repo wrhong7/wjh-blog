@@ -13,6 +13,8 @@ import Cureconnect3 from "./components/cureconnect/cureconnect3.jsx";
 import Cureconnect4 from "./components/cureconnect/cureconnect4.jsx";
 import Cureconnect5 from "./components/cureconnect/cureconnect5.jsx";
 import Cureconnect6 from "./components/cureconnect/cureconnect6.jsx";
+import Rpa from "./components/rpa.jsx";
+import Comedy from "./components/comedy.jsx";
 
 import "../styles/blog.scss"
 import "../styles/home.scss"
@@ -22,6 +24,7 @@ import "../styles/navbarWeb.scss"
 import "../styles/portfolio.scss"
 import "../styles/principles.scss"
 import "../styles/cureconnectpage.scss"
+import "../styles/comedy.scss"
 import "../resources/home-web-image2.jpg"
 import "../resources/proDevMap1.png"
 
@@ -75,6 +78,14 @@ export default function App ({props}) {
     return <Cureconnect6/>
   }
 
+  const rpa = () => {
+    return <Rpa/>
+  }
+
+  const comedy = () => {
+    return <Comedy/>
+  }
+
   return <BrowserRouter>
     <div id="application-container">
       <div><NavBar/></div>
@@ -91,6 +102,8 @@ export default function App ({props}) {
           <Route exact path="/portfolio/cureconnect/step4" component={goToCureConnect4}/>
           <Route exact path="/portfolio/cureconnect/step5" component={goToCureConnect5}/>
           <Route exact path="/portfolio/cureconnect/step6" component={goToCureConnect6}/>
+          <Route exact path="/portfolio/rpa" component={rpa}/>
+          <Route exact path="/comedy" component={comedy}/>
         </Switch>
     </div>
   </BrowserRouter>;
