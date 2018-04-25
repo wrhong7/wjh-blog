@@ -6,7 +6,13 @@ import Library from "./components/library";
 import Blog from "./components/blog";
 import Portfolio from "./components/portfolio";
 import Principles from "./components/principles";
-import Cureconnect from "./components/cureconnect.jsx";
+import Cureconnect from "./components/cureconnect/cureconnect.jsx";
+import Cureconnect1 from "./components/cureconnect/cureconnect1.jsx";
+import Cureconnect2 from "./components/cureconnect/cureconnect2.jsx";
+import Cureconnect3 from "./components/cureconnect/cureconnect3.jsx";
+import Cureconnect4 from "./components/cureconnect/cureconnect4.jsx";
+import Cureconnect5 from "./components/cureconnect/cureconnect5.jsx";
+import Cureconnect6 from "./components/cureconnect/cureconnect6.jsx";
 
 import "../styles/blog.scss"
 import "../styles/home.scss"
@@ -45,6 +51,30 @@ export default function App ({props}) {
     return <Cureconnect/>
   }
 
+  const goToCureConnect1 = () => {
+    return <Cureconnect1/>
+  }
+
+  const goToCureConnect2 = () => {
+    return <Cureconnect2/>
+  }
+
+  const goToCureConnect3 = () => {
+    return <Cureconnect3/>
+  }
+
+  const goToCureConnect4 = () => {
+    return <Cureconnect4/>
+  }
+
+  const goToCureConnect5 = () => {
+    return <Cureconnect5/>
+  }
+
+  const goToCureConnect6 = () => {
+    return <Cureconnect6/>
+  }
+
   return <BrowserRouter>
     <div id="application-container">
       <div><NavBar/></div>
@@ -55,6 +85,12 @@ export default function App ({props}) {
           <Route exact path="/portfolio" component={goToPortfolio}/>
           <Route exact path="/principles" component={goToPrinciples}/>
           <Route exact path="/portfolio/cureconnect" component={goToCureConnect}/>
+          <Route exact path="/portfolio/cureconnect/step1" component={goToCureConnect1}/>
+          <Route exact path="/portfolio/cureconnect/step2" component={goToCureConnect2}/>
+          <Route exact path="/portfolio/cureconnect/step3" component={goToCureConnect3}/>
+          <Route exact path="/portfolio/cureconnect/step4" component={goToCureConnect4}/>
+          <Route exact path="/portfolio/cureconnect/step5" component={goToCureConnect5}/>
+          <Route exact path="/portfolio/cureconnect/step6" component={goToCureConnect6}/>
         </Switch>
     </div>
   </BrowserRouter>;
