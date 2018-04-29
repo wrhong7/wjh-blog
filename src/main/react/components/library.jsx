@@ -52,16 +52,31 @@ export default class Library extends React.Component {
 
   showBookInfo(id) {
       let ids = this.state.expandedLeafletIds;
-      ids.includes(id) ? ids.splice(ids.indexOf(id), 1) :
+
+      if (ids.indexOf(id) !== -1) {
+        ids.splice(ids.indexOf(id), 1);
+      } else {
         ids.push(id);
+      }
+
+      // ids.includes(id) ?
+      //   ids.splice(ids.indexOf(id), 1) : ids.push(id);
+
       this.setState({expandedLeafletIds: ids});
   }
 
   showBookReview(id) {
-    console.log(id);
     let bookReviewIds = this.state.expandedReviewIds;
-    bookReviewIds.includes(id) ? bookReviewIds.splice(bookReviewIds.indexOf(id),1) :
+
+    if (bookReviewIds.indexOf(id) !== -1) {
+      bookReviewIds.splice(bookReviewIds.indexOf(id), 1);
+    } else {
       bookReviewIds.push(id);
+    }
+
+    // bookReviewIds.includes(id) ?
+    //   bookReviewIds.splice(bookReviewIds.indexOf(id),1) : bookReviewIds.push(id);
+
     this.setState({bookReviewIds: bookReviewIds});
   }
 
@@ -78,19 +93,56 @@ export default class Library extends React.Component {
 
                   let className;
 
-                  if (this.state.expandedReviewIds.includes(item.id)) {
+                  if (this.state.expandedReviewIds.indexOf(item.id) !== -1) {
                     className = "hideLeaflet";
                   } else {
-                    className = this.state.expandedLeafletIds.includes(item.id) ?
-                      "expandLeaflet" : "hideLeaflet";
+                    if (this.state.expandedLeafletIds.indexOf(item.id) !== -1) {
+                      className = "expandLeaflet";
+                    } else {
+                      className = "hideLeaflet";
+                    }
                   }
 
-                  let bookReviewClassName = this.state.expandedReviewIds.includes(item.id) ?
-                    "expandBookReview" : "hideBookReview";
-                  let largeContainer = this.state.expandedReviewIds.includes(item.id) ?
-                    "book-container-large" : "book-container-small";
-                  let largeContainerPhotoWidth = this.state.expandedReviewIds.includes(item.id) ?
-                    "book-image-large-container" : "book-image-small-container";
+                  // if (this.state.expandedReviewIds.includes(item.id)) {
+                  //   className = "hideLeaflet";
+                  // } else {
+                  //   className = this.state.expandedLeafletIds.includes(item.id) ?
+                  //     "expandLeaflet" : "hideLeaflet";
+                  // }
+
+                  let bookReviewClassName;
+
+                  if (this.state.expandedReviewIds.indexOf(item.id) !== -1) {
+                    bookReviewClassName = "expandBookReview";
+                  } else {
+                    bookReviewClassName = "hideBookReview";
+                  }
+
+                  // let bookReviewClassName = this.state.expandedReviewIds.includes(item.id) ?
+                  //   "expandBookReview" : "hideBookReview";
+
+                  let largeContainer;
+
+                  if (this.state.expandedReviewIds.indexOf(item.id) !== -1) {
+                    largeContainer = "book-container-large";
+                  } else {
+                    largeContainer = "book-container-small";
+                  }
+
+                  // let largeContainer = this.state.expandedReviewIds.includes(item.id) ?
+                  //   "book-container-large" : "book-container-small";
+
+                  let largeContainerPhotoWidth;
+
+                  if (this.state.expandedReviewIds.indexOf(item.id) !== -1) {
+                    largeContainerPhotoWidth = "book-image-large-container";
+                  } else {
+                    largeContainerPhotoWidth = "book-image-small-container";
+                  }
+
+                  //
+                  // let largeContainerPhotoWidth = this.state.expandedReviewIds.includes(item.id) ?
+                  //   "book-image-large-container" : "book-image-small-container";
 
                   return (
                     <div className={largeContainer} key={item.id}

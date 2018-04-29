@@ -11,8 +11,7 @@ export default class Blog extends React.Component {
       items: [],
       hashTagArray: [],
       expandedPostIds: [],
-    }
-
+    };
 
     this.getPost = this.getPost.bind(this);
     this.clickExpandOrReduceContentButton = this.clickExpandOrReduceContentButton.bind(this);
@@ -55,8 +54,6 @@ export default class Blog extends React.Component {
     });
   }
 
-
-
   parseHashTags(hashtags) {
     let hashTagArray = hashtags;
     return hashTagArray.map((hashtag, i) => {
@@ -67,9 +64,15 @@ export default class Blog extends React.Component {
 
   clickExpandOrReduceContentButton(blogPostID) {
     let ids = this.state.expandedPostIds;
-    ids.includes(blogPostID) ? ids.splice(ids.indexOf(blogPostID), 1) :
-      ids.push(blogPostID);
 
+    if (ids.indexOf(blogPostID) !== -1) {
+      ids.splice(ids.indexOf(blogPostID), 1);
+    } else {
+      ids.push(blogPostID);
+    }
+
+    // ids.includes(blogPostID) ? ids.splice(ids.indexOf(blogPostID), 1) :
+    //   ids.push(blogPostID);
     this.setState({expandedPostIds: ids});
     // console.log(this.state);
   }
@@ -82,10 +85,12 @@ export default class Blog extends React.Component {
   }
 
   togglePostLength(item) {
-    return <div className="post-expand-reduce-button reduced-font-weight"
-                onClick={() => this.clickExpandOrReduceContentButton(item.id)}>
-      {this.state.expandedPostIds.includes(item.id) ? "less" : "expand"}
-    </div>
+    return (
+      <div className="post-expand-reduce-button reduced-font-weight"
+           onClick={() => this.clickExpandOrReduceContentButton(item.id)}>
+        {(this.state.expandedPostIds.indexOf(item.id) !== -1) ? "less" : "expand"}
+      </div>
+      )
   }
 
   getAuthorAndLike(item) {
@@ -105,8 +110,15 @@ export default class Blog extends React.Component {
   }
 
   getPost(item) {
-    let className = this.state.expandedPostIds.includes(item.id) ?
-      "blogPostWrapper-long" : "blogPostWrapper-short";
+    let className;
+    if (this.state.expandedPostIds.indexOf(item.id) !== -1) {
+      className = "blogPostWrapper-long" ;
+    } else {
+      className = "blogPostWrapper-short";
+    }
+
+    // let className = this.state.expandedPostIds.includes(item.id) ?
+    //   "blogPostWrapper-long" : "blogPostWrapper-short";
 
     return (<div key={item.id} className="blogpost-wrapper">
       <div className={className} id={`wrapper-${item.id}`}>
@@ -137,7 +149,6 @@ export default class Blog extends React.Component {
 
   render() {
     return <div className="landingPageContainer">
-
       <div className="article-list reduced-font-weight">
         List
         {this.getArticleList()}

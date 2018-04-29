@@ -25,6 +25,7 @@ import "../styles/portfolio.scss"
 import "../styles/principles.scss"
 import "../styles/cureconnectpage.scss"
 import "../styles/comedy.scss"
+import "../styles/rpa.scss"
 import "../resources/proDevMap1.png"
 
 export default function App ({props}) {
