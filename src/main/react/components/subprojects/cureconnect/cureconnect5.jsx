@@ -1,7 +1,7 @@
 import React from "react";
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
-import projectProcessImage from "../../../resources/proDevMap1.png";
-import projectProcessImage2 from "../../../resources/proDevMap2.png"
+import projectProcessImage from "../../../../resources/proDevMap1.png";
+import projectProcessImage2 from "../../../../resources/proDevMap2.png"
 
 export default class Cureconnect extends React.Component {
 

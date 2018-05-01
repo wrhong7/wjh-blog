@@ -119,7 +119,29 @@ body {
 }
 
 @media screen and (max-width: 950px) {
+  .navbar-web-container {
+    width: 90%;
+    margin: 5vh 5%;
+    overflow-y: auto;
+  }
 
+  .navbar-web-left {
+    width: 100%;
+  }
+
+  .navbar-web-logo {
+    margin-left: 39vmin;
+  }
+
+  .navbar-web-right {
+    width: 110%;
+  }
+
+  .navbar-web-right a {
+    width: auto;
+    text-align: center;
+    margin: 0 1.2vmin 0 1.3vmin;
+  }
 }
 
 

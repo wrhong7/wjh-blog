@@ -1,9 +1,14 @@
 import React from "react";
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
-import projectProcessImage from "../../../resources/proDevMap1.png";
-import projectProcessImage2 from "../../../resources/proDevMap2.png"
+import projectProcessImage from "../../../../resources/proDevMap1.png";
+import projectProcessImage2 from "../../../../resources/proDevMap2.png"
 
 export default class Cureconnect extends React.Component {
+
+  openCureConnectPage() {
+    //once the image is clicked, a new tab will open. User will see the cureconnect landing page.
+    window.open("https://cureconnect.net");
+  }
 
   render() {
     return (
@@ -14,7 +19,235 @@ export default class Cureconnect extends React.Component {
         <div className="visit-cureconnect-instruction">Click above to visit CureConnect</div>
 
         <div className="cureconnect-content-wrapper" id="cureconnect-content-wrapper-mobile">
+          <div className="page-header">
+            <div className="project-synopsis">
+              <div className="synopsis-header">
+                Summary
+              </div>
 
+              <div className="synopsis-subheader">
+                Technology
+              </div>
+              <div className="synopsis-content">
+                Html, Javascript, Css, jQuery, Node.js, Firebase, AWS, Twilio
+              </div>
+
+              <div className="synopsis-subheader">
+                Business Idea
+              </div>
+              <div className="synopsis-content">
+                Q: How are we going to resolve nursing shortage in underfunded intercity and rural hospitals?<br/>
+                A: If we can develop a platform that introduces local part-time nursing positions to nurses, that can (1) reduce nurse recruiting costs and (2) alleviate financial constraints on many underfunded intercity and rural hospitals.
+              </div>
+
+              <div className="synopsis-subheader">
+                Our Goal
+              </div>
+              <div className="synopsis-content">
+                Building an MVP that helps nurses and hospitals find each other more easily
+              </div>
+
+            </div>
+          </div>
+
+          <div className="section-divider">
+            ...
+          </div>
+
+          <div className="page-content">
+            <div className="synopsis-subheader">
+              What's my mental model for building an MVP?
+            </div>
+
+            <img src={projectProcessImage} className="cureconnect-image-2" id="cureconnect-image-2-mobile" />
+            <div className="cureconnect-image-desc">We used above mental models for our MVP development</div>
+
+            <div className="cureconnect-component-button-container cursor-hover">
+              <div className="cureconnect-component-direction">
+                Please click below to read more about the details of each steps:
+              </div>
+
+              <div className="cureconnect-component-button cursor-hover">
+                <div className="cureconnect-component-row-1 cursor-hover">
+                  <span className="cureconnect-component-row-1-anchor cursor-hover">—</span>
+                  <span className="cureconnect-component-row-1-caption cursor-hover">Step One</span>
+                </div>
+                <div className="cureconnect-component-row-2 cursor-hover">
+                  Problem Identification
+                </div>
+                <div className="cureconnect-component-row-3 cursor-hover">
+                  Choosing an industry that you would like to investigate and identify problem to solve.
+                </div>
+                <div className="cureconnect-component-row-4 cursor-hover">
+                  <div className="cureconnect-component-row-4-anchor cursor-hover anchor-hover"> > </div>
+                  <div className="cureconnect-component-row-4-caption cursor-hover anchor-hover">Read More</div>
+                </div>
+              </div>
+
+              <div className="cureconnect-component-button cursor-hover">
+                <div className="cureconnect-component-row-1 cursor-hover">
+                  <span className="cureconnect-component-row-1-anchor cursor-hover">—</span>
+                  <span className="cureconnect-component-row-1-caption cursor-hover">Step Two</span>
+                </div>
+                <div className="cureconnect-component-row-2 cursor-hover">
+                  Issue & Problem Discovery
+                </div>
+                <div className="cureconnect-component-row-3 cursor-hover">
+                  Identifying subproblems under bigger problem. Identifying and talking to people with insights.
+                </div>
+                <div className="cureconnect-component-row-4 cursor-hover">
+                  <div className="cureconnect-component-row-4-anchor cursor-hover"> > </div>
+                  <div className="cureconnect-component-row-4-caption cursor-hover">Read More</div>
+                </div>
+              </div>
+
+              <div className="cureconnect-component-button cursor-hover">
+                <div className="cureconnect-component-row-1 cursor-hover">
+                  <span className="cureconnect-component-row-1-anchor cursor-hover">—</span>
+                  <span className="cureconnect-component-row-1-caption cursor-hover">Step Three</span>
+                </div>
+                <div className="cureconnect-component-row-2 cursor-hover">
+                  Pre-execution
+                </div>
+                <div className="cureconnect-component-row-3 cursor-hover">
+                  Among the list of problems, scoping in problems that can be solved with technology.
+                </div>
+                <div className="cureconnect-component-row-4 cursor-hover">
+                  <div className="cureconnect-component-row-4-anchor cursor-hover"> > </div>
+                  <div className="cureconnect-component-row-4-caption cursor-hover">Read More</div>
+                </div>
+              </div>
+
+              <div className="cureconnect-component-button cursor-hover">
+                <div className="cureconnect-component-row-1 cursor-hover">
+                  <span className="cureconnect-component-row-1-anchor cursor-hover">—</span>
+                  <span className="cureconnect-component-row-1-caption cursor-hover">Step Four</span>
+                </div>
+                <div className="cureconnect-component-row-2 cursor-hover">
+                  Product Development
+                </div>
+                <div className="cureconnect-component-row-3 cursor-hover">
+                  Zooming into problems would like to solve and tailoring right tools to solve problems.
+                </div>
+                <div className="cureconnect-component-row-4 cursor-hover">
+                  <div className="cureconnect-component-row-4-anchor cursor-hover"> > </div>
+                  <div className="cureconnect-component-row-4-caption cursor-hover">Read More</div>
+                </div>
+              </div>
+
+              <div className="cureconnect-component-button cursor-hover">
+                <div className="cureconnect-component-row-1 cursor-hover">
+                  <span className="cureconnect-component-row-1-anchor cursor-hover">—</span>
+                  <span className="cureconnect-component-row-1-caption cursor-hover">Step Five</span>
+                </div>
+                <div className="cureconnect-component-row-2 cursor-hover">
+                  User Journey Testing
+                </div>
+                <div className="cureconnect-component-row-3 cursor-hover">
+                  Test the product with potential users and harness & reflect their thoughts.
+                </div>
+                <div className="cureconnect-component-row-4 cursor-hover">
+                  <div className="cureconnect-component-row-4-anchor cursor-hover"> > </div>
+                  <div className="cureconnect-component-row-4-caption cursor-hover">Read More</div>
+                </div>
+              </div>
+
+              <div className="cureconnect-component-button cursor-hover">
+                <div className="cureconnect-component-row-1 cursor-hover">
+                  <span className="cureconnect-component-row-1-anchor cursor-hover">—</span>
+                  <span className="cureconnect-component-row-1-caption cursor-hover">Step Six</span>
+                </div>
+                <div className="cureconnect-component-row-2 cursor-hover">
+                  Visit CureConnect
+                </div>
+                <div className="cureconnect-component-row-3 cursor-hover">
+                  Where we are at the moment, direction we are moving, and next phase.
+                </div>
+                <div className="cureconnect-component-row-4 cursor-hover">
+                  <div className="cureconnect-component-row-4-anchor cursor-hover"> > </div>
+                  <div className="cureconnect-component-row-4-caption cursor-hover">Visit CureConnect</div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+
+
+
+
+
+
+          <div className="section-divider">
+            ...
+          </div>
+
+          <div className="project-content">
+            <div className="project-paragraph project-key-idea-1">
+              <div className="project-paragraph-header">
+                The Problem
+              </div>
+              <img src={projectProcessImage2} className="cureconnect-image-1" />
+              <div className="cureconnect-image-desc">Underfunded hospitals face above problems</div>
+              <div className="synopsis-content">
+                <div className="synopsis-content-paragraph">
+                  Despite a common myth, America has enough healthcare providers.
+                  The challenge is, not many wants to work in rural, intercity, or underfunded hospitals.
+                  he poorer an hospital is, the harder for them to recruit providers.
+                  They will have to pay more in recruiting fee and provider compensations.
+                  This results in poorer hospitals end up spending more on recruiting; it is a vicious cycle.
+                </div>
+                <div className="synopsis-content-paragraph">
+                  To overcome this issue, my partner and I investigated
+                  this problem and interviewed dozens of providers to understand what could be a solution.
+                  Can we solve this problem with technology somehow? Can we increase the job market supply for nurses?
+                </div>
+                <div className="project-paragraph-header">
+                  Hypothesis 1
+                </div>
+                <div className="synopsis-content-paragraph">
+                  If we can onboard the experienced but retired nurses* to our platform,
+                  hospitals can reduce (1) recruiting costs and (2) labor costs.
+                </div>
+                <div className="project-paragraph-header">
+                  Hypothesis 2
+                </div>
+                <div className="synopsis-content-paragraph">
+                  Nurses typically work three days a week (12 hour shift) at large hospitals.
+                  If we can on-board them for part time job for the remainder of the week,
+                  that would be a winning deal for everyone.
+                </div>
+                <div className="project-paragraph-subnote">
+                  *Our research indicated that technology platform may work if we can actively on-board experienced
+                  (but retired) nurses to the local job market platform.<br/><br/>
+
+                  Nurses do have a relatively high dropout rates since (1) the sector is dominated by females,
+                  (2) many become middle and upper middle class families,
+                  and (3) they have a high job market dropout rate as child rearing becomes an issue. <br/><br/>
+
+                  We came up with a conclusion--if we can develop a platform that introduces local part-time
+                  nursing positions to nurses, that can (1) reduce nurse recruiting costs and (2)
+                  alleviate financial constraints on many underfunded intercity and rural hospitals.<br/>
+                </div>
+                <div className="synopsis-content-paragraph">
+                  The more underfunded a hospital is, the harder for those institutions to recruit providers. They will have to pay more in recruiting fees and compensations and work harder to entice staffs to stay. It is a vicious cycle.
+                </div>
+                <div className="synopsis-content-paragraph single-indent">
+                  1. Residents around underfunded hospitals often have weaker (or no) health insurance. That leads to higher delinquency rate, creating a pressure on hospitals' business model.<br/>
+                  2. The lack of hosptial revenue results in longer hours and more patients from providers perspective. Less providers are willing to work for rural, intercity, or low-budget institutions.<br/>
+                  3. This often results in very high staff turnover. Low budget institutions will have to work with staff shortage.<br/>
+                  4. High turnover leads to high recruiting costs. Compensations will have to go up each time to entice providers to work under less than ideal conditions. This puts more pressure on budget.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="section-divider">
+            ...
+          </div>
 
           <div className="project-content page-width-style-two">
             <div className="project-paragraph project-key-idea-2">

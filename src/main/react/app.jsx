@@ -6,14 +6,14 @@ import Library from "./components/library";
 import Blog from "./components/blog";
 import Portfolio from "./components/portfolio";
 import Principles from "./components/principles";
-import Cureconnect from "./components/cureconnect/cureconnect.jsx";
-import Cureconnect1 from "./components/cureconnect/cureconnect1.jsx";
-import Cureconnect2 from "./components/cureconnect/cureconnect2.jsx";
-import Cureconnect3 from "./components/cureconnect/cureconnect3.jsx";
-import Cureconnect4 from "./components/cureconnect/cureconnect4.jsx";
-import Cureconnect5 from "./components/cureconnect/cureconnect5.jsx";
-import Cureconnect6 from "./components/cureconnect/cureconnect6.jsx";
-import Rpa from "./components/rpa.jsx";
+import Cureconnect from "./components/subprojects/cureconnect/cureconnect.jsx";
+import Cureconnect1 from "./components/subprojects/cureconnect/cureconnect1.jsx";
+import Cureconnect2 from "./components/subprojects/cureconnect/cureconnect2.jsx";
+import Cureconnect3 from "./components/subprojects/cureconnect/cureconnect3.jsx";
+import Cureconnect4 from "./components/subprojects/cureconnect/cureconnect4.jsx";
+import Cureconnect5 from "./components/subprojects/cureconnect/cureconnect5.jsx";
+import Cureconnect6 from "./components/subprojects/cureconnect/cureconnect6.jsx";
+import Rpa from "./components/subprojects/rpa.jsx";
 import Comedy from "./components/comedy.jsx";
 
 import "../styles/blog.scss"

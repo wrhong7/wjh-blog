@@ -1,5 +1,5 @@
 .principles-container {
-  width: 70%;
+  width: 50%;
   margin-left: 15%;
   margin-bottom: 15vmin;
   font-size: 3vmin;
@@ -20,4 +20,22 @@
   margin-left: 3.5vmin;
   color: hsl(204, 3%, 50%);
   font-weight: 200;
+}
+
+@media screen and (max-width: 950px) {
+  .principles-container {
+    width: 80%;
+    margin-left: 10%;
+  }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .principles-container {
+    width: 70%;
+    margin-left: 15%;
+  }
+
+  .principles-header {
+    margin-top: 0;
+  }
 }

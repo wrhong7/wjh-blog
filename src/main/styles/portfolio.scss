@@ -1,14 +1,11 @@
-@media only screen
-and (min-device-width: 1px)
-and (max-device-width: 812px)
-and (orientation: portrait) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   .project-item-container-mobile {
     display: flex;
     flex-direction: column-reverse;
     margin-bottom: 10vmin;
   }
 
-  #project-image-project1, #project-image-project2, #project-image-project3, #project-image-project4 {
+  #project-image-project1, #project-image-project2, #project-image-project3, #project-image-project4, #project-image-project5, #project-image-project6 {
     margin-bottom: 0;
     margin: 0 !important;
     width: 100% !important;
@@ -40,8 +37,7 @@ and (orientation: portrait) {
 
 .move-to-project-button {
   font-weight: 400;
-  margin-top: 6vmin;
-  margin-bottom: 4vmin;
+  margin: 6vmin 5vmin 4vmin 5vmin;
 }
 
 .wrapper {
@@ -71,15 +67,15 @@ a:hover {
 }
 
 .cureconnect-demo-photo {
-  width: 130%;
+  width: 100%;
+  margin-top: 5vmin;
 }
 
 .project-description-container {
   color: #969a9c;
   line-height: 6vmin;
   font-weight: 200;
-  margin-top: 4vmin;
-  margin-bottom: 4vmin;
+  margin: 4vmin 5vmin 4vmin 5vmin;
 }
 
 .go-to-page-anchor {
@@ -104,13 +100,17 @@ a:hover {
   color: #969a9c;
   width: auto;
   overflow-y: auto;
-  margin-top: 6vmin;
+  margin: 6vmin 5vmin 0 5vmin;
 }
 
 .go-to-page-anchor-container:hover {
   border-color: #4a4d4f;
   color: #4a4d4f;
   cursor: pointer;
+}
+
+.go-to-page-wrapper {
+  margin-left: 5vmin;
 }
 
 .go-to-page-anchor:hover {
@@ -144,6 +144,7 @@ a:hover {
   width: auto;
   overflow-x: hidden;
   overflow-y: auto;
+  margin-top: 5vmin;
 }
 
 #project-description-project1 {
@@ -160,8 +161,8 @@ a:hover {
 }
 
 #project-description-project3 {
-  float: left;
-}
+   float: left;
+ }
 
 #project-description-project3 {
   width: 40%;
@@ -169,6 +170,19 @@ a:hover {
 }
 
 #project-image-project3 {
+  width: 60%;
+}
+
+#project-description-project5 {
+  float: left;
+}
+
+#project-description-project5 {
+  width: 40%;
+  font-size: 3vmin;
+}
+
+#project-image-project5 {
   width: 60%;
 }
 
@@ -181,10 +195,6 @@ a:hover {
   width: 60%;
 }
 
-#project-image-project2 {
-  margin-left: -20%;
-}
-
 #project-description-project4 {
   float: right;
   width: 40%;
@@ -194,7 +204,73 @@ a:hover {
   width: 60%;
 }
 
-#project-image-project4 {
-  margin-left: -20%;
+#project-description-project6 {
+  float: right;
+  width: 40%;
+}
+
+#project-image-project6 {
+  width: 60%;
+}
+
+@media screen and (max-width: 950px) {
+  .landingPageContainer {
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  .move-to-project-button {
+    margin: 0;
+  }
+
+  .project-description-container {
+    margin-top: 1vmin;
+    margin-bottom: 1vmin;
+  }
+
+  .project-float-left {
+    margin-bottom: 10vmin;
+  }
+
+  .project-item-container-mobile {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 10vmin;
+  }
+
+  .cureconnect-demo-photo {
+    width: 100%;
+  }
+
+  .project-item-mobile {
+    width: 100%;
+  }
+
+  .move-to-project-button {
+    text-align: center;
+  }
+
+  .go-to-page-anchor-container {
+    margin-top: 0vmin;
+    float: right;
+  }
+
+  #project-image-project1, #project-image-project2, #project-image-project3, #project-image-project4, #project-image-project5, #project-image-project6 {
+    margin: 0 15% 0 15%;
+    width: 70%;
+  }
+
+  .cureconnect-demo-photo {
+    margin: 0;
+    padding: 0;
+  }
+
+  #project-description-project1, #project-description-project2, #project-description-project3, #project-description-project4, #project-description-project5, #project-description-project6 {
+    width: 90%;
+    font-size: 3vmin;
+    margin-left: 5%;
+    margin-top: 2vmin;
+  }
+
 }
 
