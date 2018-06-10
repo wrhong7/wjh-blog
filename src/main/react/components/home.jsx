@@ -23,23 +23,32 @@ export default class Home extends React.Component {
 
         <div className="home-intro-content">
           About:<br/>
-          I currently work as a Tech Consultant at <a href="https://www.kpmg.com"><u>KPMG</u></a>,
+          I currently work as a Tech Consultant at <a href="https://www.kpmg.com" target="_blank"><u>KPMG</u></a>,
           advising financial institutions with their technology architecture, design, and management strategy.
-          See my previous work experience on <a href="https://www.linkedin.com/in/wjhong/"><u>LinkedIn</u></a> Outside of work,
-          I have a <a href="https://www.linkedin.com/in/ece-ozalp/"><u>lovely partner</u></a> of life, who is an excellent software engineer.
-          Over last number of years, I worked on various <a href="https://wonjunhong.com/portfolio"><u>side projects</u></a>.
+          See my previous work experience on <a href="https://www.linkedin.com/in/wjhong/" target="_blank"><u>LinkedIn</u></a> Outside of work,
+          I have a <a href="https://www.linkedin.com/in/ece-ozalp/" target="_blank"><u>lovely partner</u></a> of life, who is an excellent software engineer.
+          Over last number of years, I worked on various <a href="/portfolio" target="_blank"><u>side projects</u></a>.
           I am care about making healthcare and finance industries more accessible. Don’t hesitate to get in touch.
           I would love to have coffee with you.
         </div>
-        <div className="home-intro-content">
-          Have a project in mind?
+        <div className="home-intro-content home-intro-contact-box">
+          Have an idea?<br/> Let's get coffee. Please message me.
           <div className="contact-buttons">
-            {/*<a class="twitter-follow-button"*/}
-               {/*href="https://twitter.com/towonhong"*/}
-               {/*data-size="large">*/}
-              {/*Follow @WJHong</a>*/}
-
-              {/*Here should go email, twitter, linkedin buttons*/}
+            <a href="mailto:won.hong@stern.nyu.edu" className="contact-button-container">
+              <i className="far fa-envelope"></i>
+            </a>
+            <a href="https://www.instagram.com/won.jun.hong/"
+               target="_blank" className="contact-button-container">
+              <i className="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/atlanta714"
+               target="_blank" className="contact-button-container">
+              <i className="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com/towonhong"
+               target="_blank" className="contact-button-container">
+              <i className="fab fa-twitter"></i>
+            </a>
           </div>
         </div>
       </div>

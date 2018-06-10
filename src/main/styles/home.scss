@@ -75,12 +75,28 @@ and (orientation: portrait) {
   font-size: 3vmin;
   width: 60%;
   margin-left: 20%;
+  margin-top: 5vmin;
   line-height: 8vmin;
   font-weight: 400;
 }
 
+.home-intro-contact-box {
+  text-align: center;
+}
+
 a:hover {
   color: #309AAA;
+}
+
+.contact-button-container {
+  font-size: 4vmin;
+  margin: 1vmin;
+}
+
+.contact-buttons {
+  text-align: center;
+  margin-top: 2vmin;
+  margin-bottom: 5vmin;
 }
 
 
