@@ -6,11 +6,12 @@ export default class Blog extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: '',
+      dataType: '',
       url: '',
       likes: '',
       items: [],
       source: '',
+      desc: '',
     }
 
     this.getPost = this.getPost.bind(this);
@@ -26,10 +27,11 @@ export default class Blog extends React.Component {
         let stringLineBreakAdded = items[item].content;
         newItems.push({
           id: item,
-          title: items[item].title,
+          dataType: items[item].dataType,
           url: items[item].url,
           likes: items[item].likes,
           source: items[item].source,
+          desc: items[item].desc,
         });
         newItems = newItems.reverse();
       }
@@ -45,7 +47,7 @@ export default class Blog extends React.Component {
   }
 
   getAuthorAndLike(item) {
-    return <div className="post-summary-stat reduced-font-weight">
+    return <div className="post-summary-stat reduced-font-weight comedy-like-post">
       <span className="comedy-post-likes">
         <span className="comedy-post-like-button" onClick={() => this.clickLikeButton(item.id, item.likes)}>
           <i className="fa fa-heart"></i>
@@ -57,26 +59,53 @@ export default class Blog extends React.Component {
     </div>;
   }
 
-  getPost(item) {
-    return (
-      <div key={item.id} className="comedy-post-item-wrapper">
-        <div id={`wrapper-${item.id}`}>
-          <div className="comedy-post-title">{item.title}</div>
-          <div className="comedy-post">{item.url}</div>
-          <div className="comedy-post-source">{item.source}</div>
+  getGif(item){
+    return <div key={item.id} className="comedy-post-item-wrapper">
+      <div id={`wrapper-${item.id}`}>
+        <div className="comedy-post-desc">{item.desc}</div>
+        <div className="video-container">
+          <iframe
+            src={item.url}
+            width="853" height="480"
+            className="comedy-post-video"
+            frameBorder='0' scrolling='no'
+            allowFullScreen>
+          </iframe>
         </div>
-        {this.getAuthorAndLike(item)}
       </div>
-    )
+      {this.getAuthorAndLike(item)}
+    </div>
+  }
+
+  getImg(item) {
+    return <div key={item.id} className="comedy-post-item-wrapper">
+      <div id={`wrapper-${item.id}`}>
+        <div className="comedy-post-desc">{item.desc}</div>
+        <div className="image-container">
+          <img className="image-size-container" src={item.url} />
+        </div>
+      </div>
+      {this.getAuthorAndLike(item)}
+    </div>
+  }
+
+  getPost(item) {
+    switch(item.dataType) {
+      case "gif":
+        return this.getGif(item);
+
+      case "img":
+        return this.getImg(item);
+    }
   }
 
   render() {
     return (
       <div className="landingPageContainer">
         <div className="comedy-philosophy">
-          What's the point of internet if there is no entertainment?
+          What's the point of Internet if there is no entertainment?
         </div>
-        <div className='article-container'>
+        <div className='video-page-container'>
           {this.state.items.map(this.getPost)}
         </div>
       </div>
@@ -84,5 +113,3 @@ export default class Blog extends React.Component {
   }
 
 }
-
-
