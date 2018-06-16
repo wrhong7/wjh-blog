@@ -34,6 +34,7 @@ export default class Blog extends React.Component {
           likes: items[item].likes,
           readingTime: items[item].readingTime,
         });
+        newItems = newItems.reverse();
       }
       this.setState({items: newItems});
     });
@@ -147,6 +148,10 @@ export default class Blog extends React.Component {
     })
   }
 
+  expandBlogPrincipleSection() {
+    $(".blogging-principles-section").css("height", "auto")
+  }
+
   render() {
     return <div className="landingPageContainer">
       <div className="article-list reduced-font-weight">
@@ -155,6 +160,18 @@ export default class Blog extends React.Component {
       </div>
       <div className='article-container'>
         <section className='display-item'>
+          <div className="wrapper">
+            <div className="blogging-principles-section">
+              <div className="blog-principle-header"
+                   onClick={() => this.expandBlogPrincipleSection()}>
+                Blogging Principles
+              </div>
+              1. Never write a single sentence to show off.<br/>
+              2. Never post online unless 3 days have passed since writing.<br/>
+              3. Never offend anyone. Start from a consensus. <br/>
+              4. Purpose of writing is to crystalize my thoughts."
+            </div>
+          </div>
           <div className="wrapper">
             {this.state.items.map(this.getPost)}
           </div>

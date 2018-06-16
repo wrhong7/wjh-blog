@@ -135,6 +135,21 @@ li:hover {
   color: hsl(12, 67%, 55%);
 }
 
+.blogging-principles-section {
+  height: 10vh;
+  overflow-y: hidden;
+}
+
+.blog-principle-header {
+  text-align: center;
+  margin-bottom: 3vh;
+}
+
+.blog-principle-header:hover {
+  cursor: pointer;
+  font-weight: 600;
+}
+
 @media screen and (min-width: 1680px) {
 
   .post-like-button {

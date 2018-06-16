@@ -22,7 +22,6 @@ export default class Blog extends React.Component {
     itemsRef.on('value', (snapshot) => {
       let items = snapshot.val();
       let newItems = [];
-      newItems = newItems.reverse();
       for (let item in items) {
         let stringLineBreakAdded = items[item].content;
         newItems.push({
