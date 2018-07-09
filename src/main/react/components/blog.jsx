@@ -24,13 +24,6 @@ export default class Blog extends React.Component {
       let items = snapshot.val();
       let newItems = [];
 
-      //items get the whole data
-
-      //do an iteration -- put them into a dictionary based on sequence
-
-
-
-
       for (let item in items) {
         let stringLineBreakAdded = items[item].content;
         newItems.push({
@@ -43,15 +36,14 @@ export default class Blog extends React.Component {
           readingTime: items[item].readingTime,
           index: items[item].index,
         });
+        //indexing based on the newest post.
         newItems.sort(function(a, b){
           return b.index-a.index
         })
       }
 
-
-
       this.setState({items: newItems});
-      console.log(newItems);
+      // console.log(newItems);
     });
   }
 
