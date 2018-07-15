@@ -13,7 +13,7 @@ export default class Home extends React.Component {
         </div>
 
         <div className="home-intro-container-web">
-          Hello, my name is Won Jun.<br/> I am a consultant / designer / developer.
+          Hello, my name is Won&nbsp;Jun.<br/> I am a consultant / designer&nbsp;/&nbsp;developer.
         </div>
 
         <div className="home-background-container-web">
