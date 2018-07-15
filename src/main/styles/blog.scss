@@ -1,3 +1,7 @@
+div {
+  font-size: 3vmin;
+}
+
 .landingPageContainer {
   width: 70%;
   overflow-y: auto;
@@ -82,12 +86,14 @@ li:hover {
 
 .blogPostWrapper-short {
   padding-top: 5vmin;
+  width: 100%;
   height: 45vmin;
   overflow: hidden;
 }
 
 .blogPostWrapper-long {
   padding-top: 5vmin;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -189,6 +195,11 @@ li:hover {
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+  div {
+    font-size: 3vmin;
+  }
+
   .article-container {
     width: 100%;
   }

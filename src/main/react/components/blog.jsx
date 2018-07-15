@@ -11,6 +11,7 @@ export default class Blog extends React.Component {
       items: [],
       hashTagArray: [],
       expandedPostIds: [],
+      fetchedItems: [],
     };
 
     this.getPost = this.getPost.bind(this);
@@ -18,7 +19,6 @@ export default class Blog extends React.Component {
   }
 
   componentDidMount() {
-
     const itemsRef = firebase.database().ref('items');
     itemsRef.on('value', (snapshot) => {
       let items = snapshot.val();
@@ -41,11 +41,20 @@ export default class Blog extends React.Component {
           return b.index-a.index
         })
       }
-
       this.setState({items: newItems});
-      // console.log(newItems);
+      this.setState({fetchedItems: newItems.slice(0,5)});
+      console.log(newItems);
+      console.log(this.state.fetchedItems.length);
     });
   }
+
+  loadMorePosts() {
+    let loadedPostArrayLength = this.state.fetchedItems.length;
+    let newPostArraayLength = loadedPostArrayLength + 5;
+    this.setState({fetchedItems: this.state.items.slice(0, newPostArraayLength)});
+  }
+
+
 
   clickLikeButton(itemId, likesCount) {
     var updates = {};
@@ -125,9 +134,6 @@ export default class Blog extends React.Component {
       className = "blogPostWrapper-short";
     }
 
-    // let className = this.state.expandedPostIds.includes(item.id) ?
-    //   "blogPostWrapper-long" : "blogPostWrapper-short";
-
     return (<div key={item.id} className="blogpost-wrapper">
       <div className={className} id={`wrapper-${item.id}`}>
         <div className="blog-post-title">{item.title}</div>
@@ -180,9 +186,12 @@ export default class Blog extends React.Component {
             </div>
           </div>
           <div className="wrapper">
-            {this.state.items.map(this.getPost)}
+            {this.state.fetchedItems.map(this.getPost)}
           </div>
         </section>
+        <div onClick={() => this.loadMorePosts()}>
+          Load More Posts
+        </div>
       </div>
     </div>
   }
