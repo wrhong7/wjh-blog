@@ -34,6 +34,15 @@ export default class Portfolio extends React.Component {
         items: newState
       });
     });
+
+
+    console.log(this.props);
+  }
+
+  componentWIllReceiveProps(newProps) {
+    if (newProps.currentItem !== this.props.currentItem) {
+      this.setState({activeRule: "test"});
+    }
   }
 
   render() {

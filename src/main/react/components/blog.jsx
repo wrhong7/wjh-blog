@@ -1,5 +1,6 @@
 import React from "react";
 import firebase from '../../../../src/firebase.js';
+import BottomScrollListener from 'react-bottom-scroll-listener';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 export default class Blog extends React.Component {
@@ -12,10 +13,12 @@ export default class Blog extends React.Component {
       hashTagArray: [],
       expandedPostIds: [],
       fetchedItems: [],
+      isPageBottomReached: false,
     };
 
     this.getPost = this.getPost.bind(this);
     this.clickExpandOrReduceContentButton = this.clickExpandOrReduceContentButton.bind(this);
+    this.handleScroll = this.handleScroll.bind(this)
   }
 
   componentDidMount() {
@@ -41,11 +44,52 @@ export default class Blog extends React.Component {
           return b.index-a.index
         })
       }
+
       this.setState({items: newItems});
       this.setState({fetchedItems: newItems.slice(0,5)});
-      console.log(newItems);
-      console.log(this.state.fetchedItems.length);
     });
+
+    window.addEventListener("scroll", this.handleScroll);
+  }
+
+  getScrollXY() {
+    var scrOfX = 0, scrOfY = 0;
+    if( typeof( window.pageYOffset ) == 'number' ) {
+      //Netscape compliant
+      scrOfY = window.pageYOffset;
+      scrOfX = window.pageXOffset;
+    } else if( document.body && ( document.body.scrollLeft || document.body.scrollTop ) ) {
+      //DOM compliant
+      scrOfY = document.body.scrollTop;
+      scrOfX = document.body.scrollLeft;
+    } else if( document.documentElement && ( document.documentElement.scrollLeft || document.documentElement.scrollTop ) ) {
+      //IE6 standards compliant mode
+      scrOfY = document.documentElement.scrollTop;
+      scrOfX = document.documentElement.scrollLeft;
+    }
+    return [ scrOfX, scrOfY ];
+  }
+
+//taken from http://james.padolsey.com/javascript/get-document-height-cross-browser/
+  getDocHeight() {
+    var D = document;
+    return Math.max(
+      D.body.scrollHeight, D.documentElement.scrollHeight,
+      D.body.offsetHeight, D.documentElement.offsetHeight,
+      D.body.clientHeight, D.documentElement.clientHeight
+    );
+  }
+
+  handleScroll(event) {
+      if (!this.state.isPageBottomReached && this.getDocHeight() < this.getScrollXY()[1] + window.innerHeight + 660) {
+        console.log("should be triggered only onece")
+        this.setState({isPageBottomReached: true});
+        this.loadMorePosts();
+      }
+
+      setTimeout(() => {
+        this.setState({isPageBottomReached: false});
+      }, 500)
   }
 
   loadMorePosts() {
@@ -54,7 +98,10 @@ export default class Blog extends React.Component {
     this.setState({fetchedItems: this.state.items.slice(0, newPostArraayLength)});
   }
 
-
+  loadAllPosts() {
+    let itemsLength = this.state.items.length;
+    this.setState({fetchedItems: this.state.items.slice(0, itemsLength)});
+  }
 
   clickLikeButton(itemId, likesCount) {
     var updates = {};
@@ -128,6 +175,7 @@ export default class Blog extends React.Component {
 
   getPost(item) {
     let className;
+
     if (this.state.expandedPostIds.indexOf(item.id) !== -1) {
       className = "blogPostWrapper-long" ;
     } else {
@@ -146,9 +194,9 @@ export default class Blog extends React.Component {
   }
 
   scrollToBlogPost(id) {
-    // getting the div id there
-    // console.log(`wrapper-${id}`);
-    var element = document.getElementById(`wrapper-${id}`)
+    //Loads all blog posts when clicked.
+    this.loadAllPosts();
+    var element = document.getElementById(`wrapper-${id}`);
     element.scrollIntoView();
   }
 
@@ -165,6 +213,19 @@ export default class Blog extends React.Component {
     $(".blogging-principles-section").css("height", "auto")
   }
 
+  blogPrincipleSection() {
+    return(<div className="blogging-principles-section">
+      <div className="blog-principle-header"
+           onClick={() => this.expandBlogPrincipleSection()}>
+        Blogging Principles
+      </div>
+      1. Never write a single sentence to show off.<br/>
+      2. Never post online unless 3 days have passed since writing.<br/>
+      3. Never offend anyone. Start from a consensus. <br/>
+      4. Purpose of writing is to crystalize my thoughts."
+    </div>)
+  }
+
   render() {
     return <div className="landingPageContainer">
       <div className="article-list reduced-font-weight">
@@ -174,24 +235,12 @@ export default class Blog extends React.Component {
       <div className='article-container'>
         <section className='display-item'>
           <div className="wrapper">
-            <div className="blogging-principles-section">
-              <div className="blog-principle-header"
-                   onClick={() => this.expandBlogPrincipleSection()}>
-                Blogging Principles
-              </div>
-              1. Never write a single sentence to show off.<br/>
-              2. Never post online unless 3 days have passed since writing.<br/>
-              3. Never offend anyone. Start from a consensus. <br/>
-              4. Purpose of writing is to crystalize my thoughts."
-            </div>
+            {this.blogPrincipleSection()}
           </div>
           <div className="wrapper">
             {this.state.fetchedItems.map(this.getPost)}
           </div>
         </section>
-        <div onClick={() => this.loadMorePosts()}>
-          Load More Posts
-        </div>
       </div>
     </div>
   }

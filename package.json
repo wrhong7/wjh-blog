@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "life of won jun hong",
   "main": "./gulpfile.js",
-  "dependencies": {},
+  "dependencies": {
+    "react-infinite-scroller": "^1.2.0"
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",

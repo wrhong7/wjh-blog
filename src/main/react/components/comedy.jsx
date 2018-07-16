@@ -12,15 +12,18 @@ export default class Blog extends React.Component {
       items: [],
       source: '',
       desc: '',
+      loadedItems: [],
     }
 
     this.getPost = this.getPost.bind(this);
+    this.handleScroll = this.handleScroll.bind(this);
   }
 
   componentDidMount() {
     const itemsRef = firebase.database().ref('comedy');
     itemsRef.on('value', (snapshot) => {
       let items = snapshot.val();
+      console.log(items);
       let newItems = [];
       for (let item in items) {
         let stringLineBreakAdded = items[item].content;
@@ -31,11 +34,64 @@ export default class Blog extends React.Component {
           likes: items[item].likes,
           source: items[item].source,
           desc: items[item].desc,
+          isPageBottomReached: false,
         });
         newItems = newItems.reverse();
       }
       this.setState({items: newItems});
+      this.setState({loadedItems: newItems.slice(0,2)});
+
+      window.addEventListener("scroll", this.handleScroll);
     });
+  }
+
+  loadMorePosts() {
+    let fetchItemLength = this.state.loadedItems.length;
+    console.log(fetchItemLength);
+    console.log(this.state.items);
+    this.setState({loadedItems: this.state.items.slice(0,fetchItemLength + 2)});
+  }
+
+  getScrollXY() {
+    var scrOfX = 0, scrOfY = 0;
+    if( typeof( window.pageYOffset ) == 'number' ) {
+      //Netscape compliant
+      scrOfY = window.pageYOffset;
+      scrOfX = window.pageXOffset;
+    } else if( document.body && ( document.body.scrollLeft || document.body.scrollTop ) ) {
+      //DOM compliant
+      scrOfY = document.body.scrollTop;
+      scrOfX = document.body.scrollLeft;
+    } else if( document.documentElement && ( document.documentElement.scrollLeft || document.documentElement.scrollTop ) ) {
+      //IE6 standards compliant mode
+      scrOfY = document.documentElement.scrollTop;
+      scrOfX = document.documentElement.scrollLeft;
+    }
+    return [ scrOfX, scrOfY ];
+  }
+
+//taken from http://james.padolsey.com/javascript/get-document-height-cross-browser/
+  getDocHeight() {
+    var D = document;
+    return Math.max(
+      D.body.scrollHeight, D.documentElement.scrollHeight,
+      D.body.offsetHeight, D.documentElement.offsetHeight,
+      D.body.clientHeight, D.documentElement.clientHeight
+    );
+  }
+
+  handleScroll(event) {
+
+    if (!this.state.isPageBottomReached && this.getDocHeight() < this.getScrollXY()[1] + window.innerHeight + 654) {
+      console.log("should be triggered only onece");
+      console.log(this.getDocHeight(),this.getScrollXY()[1], window.innerHeight);
+      this.setState({isPageBottomReached: true});
+      this.loadMorePosts();
+    }
+
+    setTimeout(() => {
+      this.setState({isPageBottomReached: false});
+    }, 1000)
   }
 
   clickLikeButton(itemId, likesCount) {
@@ -105,7 +161,7 @@ export default class Blog extends React.Component {
           What's the point of Internet if there is no entertainment?
         </div>
         <div className='video-page-container'>
-          {this.state.items.map(this.getPost)}
+          {this.state.loadedItems.map(this.getPost)}
         </div>
       </div>
     )
