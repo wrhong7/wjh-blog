@@ -15,6 +15,7 @@ import Cureconnect5 from "./components/subprojects/cureconnect/cureconnect5.jsx"
 import Cureconnect6 from "./components/subprojects/cureconnect/cureconnect6.jsx";
 import Rpa from "./components/subprojects/rpa.jsx";
 import Comedy from "./components/comedy.jsx";
+import ZeroCollision from "./components/subprojects/zeroCollision.jsx";
 
 import "../styles/blog.scss"
 import "../styles/home.scss"
@@ -52,6 +53,10 @@ export default function App ({props}) {
 
   const goToCureConnect = () => {
     return <Cureconnect/>
+  }
+
+  const goToZeroCollision = () => {
+    return <ZeroCollision/>
   }
 
   const goToCureConnect1 = () => {
@@ -103,6 +108,7 @@ export default function App ({props}) {
           <Route exact path="/portfolio/cureconnect/step5" component={goToCureConnect5}/>
           <Route exact path="/portfolio/cureconnect/step6" component={goToCureConnect6}/>
           <Route exact path="/portfolio/rpa" component={rpa}/>
+          <Route exact path="/portfolio/zeroCollision" component={goToZeroCollision}/>
           <Route exact path="/comedy" component={comedy}/>
         </Switch>
     </div>

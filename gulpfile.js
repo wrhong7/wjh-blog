@@ -78,6 +78,7 @@ var eslint = require('gulp-eslint');
 var jasmineBrowser = require('gulp-jasmine-browser');
 var plumber = require('gulp-plumber');
 var nodemon = require('gulp-nodemon');
+var minify = require('gulp-minify');
 
 gulp.task('start', ['build'], function () {
   nodemon({
@@ -110,6 +111,14 @@ gulp.task('build', function () {
     .pipe(webpackStream(WEBPACK_BUILD_CONFIG))
     .pipe(gulp.dest(BUILD_PATH))
 });
+//
+// gulp.task('compress', function() {
+//   gulp.src(GLOBS.js_jsx)
+//     .pipe(minify())
+//     .pipe(gulp.dest('dist'))
+// });
+
+// var uglify = require('gulp-uglify');
 
 gulp.task('watch', function () {
   return gulp.src(GLOBS.js_jsx)
@@ -118,7 +127,8 @@ gulp.task('watch', function () {
     }))
     .pipe(webpackStream(_.merge({}, WEBPACK_BUILD_CONFIG, {
       watch: true,
-      devtool: 'inline-source-map',
+      // devtool: 'inline-source-map',
     })))
+    .pipe(minify())
     .pipe(gulp.dest(BUILD_PATH))
 });

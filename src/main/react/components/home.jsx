@@ -9,7 +9,7 @@ export default class Home extends React.Component {
       <div className="navbar-home-container">
 
         <div className="notification-pop-up">
-          Oh yeah! Upgraded with the modern stack <span>(react.js + node.js + firebase)!</span>
+          Oh yeah! Won Jun just moved from New York -> Vancouver!
         </div>
 
         <div className="home-intro-container-web">

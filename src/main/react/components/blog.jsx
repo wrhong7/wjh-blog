@@ -82,7 +82,6 @@ export default class Blog extends React.Component {
 
   handleScroll(event) {
       if (!this.state.isPageBottomReached && this.getDocHeight() < this.getScrollXY()[1] + window.innerHeight + 660) {
-        console.log("should be triggered only onece")
         this.setState({isPageBottomReached: true});
         this.loadMorePosts();
       }
@@ -194,7 +193,8 @@ export default class Blog extends React.Component {
   }
 
   scrollToBlogPost(id) {
-    //Loads all blog posts when clicked.
+    //Loads all blog posts when clicked (because the blog post loads all articles, but infinite scrolling might have not
+    //fully loaded all the posts on the blog. Therefore, we need to load all posts to use this features.
     this.loadAllPosts();
     var element = document.getElementById(`wrapper-${id}`);
     element.scrollIntoView();
@@ -217,7 +217,7 @@ export default class Blog extends React.Component {
     return(<div className="blogging-principles-section">
       <div className="blog-principle-header"
            onClick={() => this.expandBlogPrincipleSection()}>
-        Blogging Principles
+        Click here for blogging principles
       </div>
       1. Never write a single sentence to show off.<br/>
       2. Never post online unless 3 days have passed since writing.<br/>
