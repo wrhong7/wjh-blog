@@ -48,7 +48,7 @@ export default class Principles extends React.Component {
             <p className="principles-header">Before Going to Bed</p>
             <p>1. Going to bed by 10PM</p>
             <p className="principles-sub-explanation-indent">
-              Can read paperback of GQ, Vogue, Inc, or The Economist but not smartphones.<br/>
+              I can read books to relax myself but not electronics..<br/>
             </p>
             <p className="principles-sub-explanation-indent">
               <i>If I need to get something done ASAP, do it at 5AM next morning. The results will be better.</i>
