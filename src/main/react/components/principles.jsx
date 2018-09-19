@@ -46,18 +46,18 @@ export default class Principles extends React.Component {
 
           <div className="principles-list">
             <p className="principles-header">Before Going to Bed</p>
-            <p>1. Go to bed by 10PM.</p>
+            <p>1. Going to bed by 10PM</p>
             <p className="principles-sub-explanation-indent">
-              Can read paper version of GQ, Vogue, Inc, or The Economist but not smartphones.<br/>
+              Can read paperback of GQ, Vogue, Inc, or The Economist but not smartphones.<br/>
             </p>
             <p className="principles-sub-explanation-indent">
-              <i>If you need to get something done ASAP, do it at 5AM next morning. The results will be better.</i>
+              <i>If I need to get something done ASAP, do it at 5AM next morning. The results will be better.</i>
             </p>
             <p>
-              2. Revisit and plan
+              2. Planning for tomorrow before going to bed
             </p>
             <p className="principles-sub-explanation-indent">
-              While you are in bed, think of daily highlights and reflect on those moments.<br/>
+              While I am in bed, review the day and plan for tomorrow<br/>
             </p>
             <p className="principles-sub-explanation-indent">
               <i>Try to revisit and think what I could have done differently.</i>
@@ -66,32 +66,32 @@ export default class Principles extends React.Component {
               Facing Difficulties
             </p>
             <p>
-              3. You have a problem? Now is time to solve.
+              3. Having a problem? Now is time to solve.
             </p>
             <p className="principles-sub-explanation-indent">
               Don't shy away from the problems because they are painful.<br/>
             </p>
             <p className="principles-sub-explanation-indent">
-              <i>Problems are like cancer cells. If you don’t solve them, they will likely grow. Not always but chances are large. If there’s a will, there will be a solution.</i>
+              <i>Problems are like cancer cells. If I don’t solve them now, they will likely grow. If there’s a will, there will be a solution.</i>
             </p>
             <p>
-              4. Stay close with the streetsmarts.
+              4. Staying close with the streetsmarts.
             </p>
             <p className="principles-sub-explanation-indent">
-              Spend time with street smarts and take a good care of them. You will soon become one.
+              Spend time with street smarts and take a good care of them.
             </p>
             <p className="principles-sub-explanation-indent">
               <i>Street smarts have solutions for everything, especially when you desperately need them.</i>
             </p>
             <p className="principles-header">When you are Hesitant</p>
             <p>
-              5. When you are reluctant, ask yourself, “what do I have to lose?”
+              5. When I am reluctant, ask myself, “what do I have to lose?”
             </p>
             <p className="principles-sub-explanation-indent">
               If something needs to be done (or can be done), do it now than later.
             </p>
             <p className="principles-sub-explanation-indent">
-              <i>I have heard many regrets of my friends not talking to a cute girl sitting at a cafe, but I haven’t heard the opposite yet.</i>
+              <i>I met my greatest friends by randomly talking to them at some point in my life.</i>
             </p>
             <p>
               6. Momentum is the Key
@@ -108,10 +108,10 @@ export default class Principles extends React.Component {
               7. Keep it simple and stupid (KISS)
             </p>
             <p className="principles-sub-explanation-indent">
-              Don't be a New Yorker Writer or Malcolm Gladwell.
+              Don't be a New Yorker or Malcolm Gladwell.
             </p>
             <p className="principles-sub-explanation-indent">
-              <i>Richard Feynman and Donald Trump work better than Einstein or Polisci professors in real world.</i>
+              <i>Readers prefer concise writing.</i>
             </p>
             <p>
               8. Never talk about things you can’t control.
@@ -120,16 +120,16 @@ export default class Principles extends React.Component {
               Don’t ever present a problem unless you are trying to resolve them.
             </p>
             <p className="principles-sub-explanation-indent">
-              <i>Trump is not going to change his plans because you complain.</i>
+              <i>Problems are not going to be resolved by complaining.</i>
             </p>
             <p>
               9. Don't get into arguments.
             </p>
             <p className="principles-sub-explanation-indent">
-              There are people like Carl Icahn, Donald Trump, and Travis Kalanick.
+              Arguments waste time & energy and resolve nothing.
             </p>
             <p className="principles-sub-explanation-indent">
-              <i>They will shoot their foot with machine gun just to beat you in an argument. Say “you are right” and move on. Sometimes, you can even learn from them.</i>
+              <i>Sometimes, just say, “you are right” and move on. People need vote of confidence.</i>
             </p>
             <p className="principles-header">
               People Relations
@@ -138,10 +138,10 @@ export default class Principles extends React.Component {
               10. Only focus on who you care.
             </p>
             <p className="principles-sub-explanation-indent">
-              Your energy is limited. If you can spend time with caring and smart people, you network of caring and smart people will grow exponentially.
+                Your energy is limited. If you can spend time with caring and smart people, you network of caring and smart people will grow exponentially.
             </p>
             <p className="principles-sub-explanation-indent">
-              <i>Once a while, try to surprise them. It is okay to be crazy. Be innovative and memorable one.</i>
+              <i>Once a while, try to surprise them with something nice. Small touches last.</i>
             </p>
             <p>
               11. Never hang out with boring people--especially complainers.
@@ -159,7 +159,7 @@ export default class Principles extends React.Component {
               Life is short. There are too many beautiful and entertaining things to spend a single second with boring people.
             </p>
             <p className="principles-sub-explanation-indent">
-              <i>If your friend does not say anything intelligent or interesting in last four gatherings, write them off.</i>
+              <i>If your friend does not say anything interesting in last four gatherings, you need to move on.</i>
             </p>
           </div>
         </div>
