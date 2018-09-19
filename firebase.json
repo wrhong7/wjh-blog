@@ -20,6 +20,7 @@
 //    "predeploy": [
 //      "npm --prefix \"$RESOURCE_DIR\" run lint"
 //    ],
+    //eliminating this since this predeploy function is causing an error
     "source": "functions"
   },
   "storage": {

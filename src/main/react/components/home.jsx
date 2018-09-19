@@ -37,7 +37,7 @@ export default class Home extends React.Component {
             <a href="mailto:won.hong@stern.nyu.edu" className="contact-button-container">
               <i className="far fa-envelope"></i>
             </a>
-            <a href="https://www.instagram.com/won.jun.hong/"
+            <a href="https://www.instagram.com/bitchy.richy/"
                target="_blank" className="contact-button-container">
               <i className="fab fa-instagram"></i>
             </a>
