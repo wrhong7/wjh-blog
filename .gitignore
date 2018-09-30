@@ -1,4 +1,4 @@
 node_modules
-.idea
-dist/bundle.js
+              .idea
+              dist/bundle.js
 dist/bundle.css

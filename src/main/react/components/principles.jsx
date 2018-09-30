@@ -37,7 +37,8 @@ export default class Principles extends React.Component {
             {/*and it seems to be working well so far. However, as I move forward with my machine-learning process,*/}
             {/*I will tweak, remove, and may even introduce principles that contradicts the ones below.</p>*/}
 
-            These are my principles; these can change at any time.
+            Goals are important.<br/>
+            But getting a system of discipline and deploying it are more important.
           </div>
 
           {/*<div className="principles-header">*/}

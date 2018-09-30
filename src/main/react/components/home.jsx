@@ -22,10 +22,14 @@ export default class Home extends React.Component {
         </div>
 
         <div className="home-intro-content">
-          About:<br/>
-          I currently work as a Tech Consultant at <a href="https://www.kpmg.com" target="_blank"><u>KPMG</u></a>,
-          advising financial institutions with their technology architecture, design, and management strategy.
-          See my previous work experience on <a href="https://www.linkedin.com/in/wjhong/" target="_blank"><u>LinkedIn</u></a> Outside of work,
+          I bridge the gaps between business and technology. My passion lies where technology meets Finance and Healthcare.
+          I bring my business + client consultation experiences and coding skills to the table.
+
+          Recently, I moved to Vancouver to accommodate my partner. Before moving to Canada,
+          I worked as a Tech Consultant at <a href="https://www.kpmg.com" target="_blank"><u>KPMG's</u></a> New York office.
+          For three years, I advised and inspected world’s largest financial institutions with their tech architecture & design
+          + information management strategies. See my previous work experience on <a href="https://www.linkedin.com/in/wjhong/" target="_blank"><u>LinkedIn</u></a>.
+
           I have a <a href="https://www.linkedin.com/in/ece-ozalp/" target="_blank"><u>lovely partner</u></a> of life, who is an excellent software engineer.
           Over last number of years, I worked on various <a href="/portfolio" target="_blank"><u>side projects</u></a>.
           I am care about making healthcare and finance industries more accessible. Don’t hesitate to get in touch.
