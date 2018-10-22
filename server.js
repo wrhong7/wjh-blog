@@ -20,7 +20,7 @@ const sitemap = sm.createSitemap({
     {url: "/portfolio/cureconnect/step6", changefreq: 'daily', priority: 0.2},
     {url: "/portfolio/rpa", changefreq: 'daily', priority: 0.3},
     {url: "/portfolio/zeroCollision", changefreq: 'daily', priority: 0.3},
-    {url: "/comedy", changefreq: 'daily', priority: 0.4,
+    {url: "/comedy", changefreq: 'daily', priority: 0.4},
   ]
 });
 
