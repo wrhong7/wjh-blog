@@ -1,8 +1,6 @@
 import React from "react";
 import {Link, Route} from 'react-router-dom';
 
-
-
 export default class Home extends React.Component {
   render() {
     return (
@@ -22,7 +20,8 @@ export default class Home extends React.Component {
         </div>
 
         <div className="home-intro-content">
-          I bridge the gaps between business and technology. My passion lies where technology meets Finance and Healthcare.
+          I bridge the gaps between business and technology.
+          My passion lies where technology meets Finance and Healthcare.
           I bring my business + client consultation experiences and coding skills to the table.
 
           Recently, I moved to Vancouver to accommodate my partner. Before moving to Canada,

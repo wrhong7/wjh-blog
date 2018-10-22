@@ -50664,7 +50664,9 @@ var Principles = function (_React$Component) {
           _react2.default.createElement(
             "div",
             { className: "principles-content" },
-            "These are my principles; these can change at any time."
+            "Goals are important.",
+            _react2.default.createElement("br", null),
+            "But getting a system of discipline and deploying it are more important."
           ),
           _react2.default.createElement(
             "div",
