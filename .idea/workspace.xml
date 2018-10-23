@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90c8cb8f-2ba8-49df-8e28-26651a4fdd26" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.firebase/hosting.ZGlzdA.cache" afterPath="$PROJECT_DIR$/.firebase/hosting.ZGlzdA.cache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/dist/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -104,7 +105,7 @@
         <entry file="file://$PROJECT_DIR$/dist/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
-              <caret line="15" column="200" lean-forward="false" selection-start-line="15" selection-start-column="200" selection-end-line="15" selection-end-column="200" />
+              <caret line="15" column="128" lean-forward="false" selection-start-line="15" selection-start-column="128" selection-end-line="15" selection-end-column="128" />
               <folding />
             </state>
           </provider>
@@ -233,7 +234,7 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="950" />
+    <option name="x" value="-10" />
     <option name="width" value="980" />
     <option name="height" value="1090" />
   </component>
@@ -404,12 +405,12 @@
       <workItem from="1538284571394" duration="1307000" />
       <workItem from="1538588973340" duration="13000" />
       <workItem from="1540237532345" duration="4418000" />
-      <workItem from="1540242468769" duration="4093000" />
+      <workItem from="1540242468769" duration="4619000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="279220000" />
+    <option name="totallyTimeSpent" value="279746000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1102" extended-state="6" />
@@ -815,7 +816,7 @@
     <entry file="file://$PROJECT_DIR$/dist/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
-          <caret line="15" column="200" lean-forward="false" selection-start-line="15" selection-start-column="200" selection-end-line="15" selection-end-column="200" />
+          <caret line="15" column="128" lean-forward="false" selection-start-line="15" selection-start-column="128" selection-end-line="15" selection-end-column="128" />
           <folding />
         </state>
       </provider>
