@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="90c8cb8f-2ba8-49df-8e28-26651a4fdd26" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.firebase/hosting.ZGlzdA.cache" afterPath="$PROJECT_DIR$/.firebase/hosting.ZGlzdA.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/dist/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -97,8 +96,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dist/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="101" />
+            <state relative-caret-position="173">
+              <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -434,12 +433,12 @@
       <workItem from="1540618801815" duration="7000" />
       <workItem from="1541648458959" duration="713000" />
       <workItem from="1541890316043" duration="6169000" />
-      <workItem from="1541988500722" duration="1198000" />
+      <workItem from="1541988500722" duration="1559000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="289351000" />
+    <option name="totallyTimeSpent" value="289712000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1102" extended-state="7" />
@@ -831,8 +830,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="101" />
+        <state relative-caret-position="173">
+          <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
           <folding />
         </state>
       </provider>
