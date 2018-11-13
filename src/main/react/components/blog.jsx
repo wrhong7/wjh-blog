@@ -1,6 +1,5 @@
 import React from "react";
 import firebase from '../../../../src/firebase.js';
-import BottomScrollListener from 'react-bottom-scroll-listener';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 export default class Blog extends React.Component {

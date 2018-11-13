@@ -55,17 +55,10 @@ const WBBPACK_SRC_CONFIG = {
     extensions: ['.js', '.jsx', '.json', '.scss', '.css']
   }, plugins: [
     new ExtractTextPlugin('bundle.css'),
-    new webpack.DefinePlugin({ //<--key to reduce React's size
-      'process.env': {
-        'NODE_ENV': JSON.stringify('production')
-      }
-    }),
-    new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.UglifyJsPlugin(),
   ],
-  optimization: {
-    minimize: true,
-  },
+  // optimization: {
+  //   minimize: true,
+  // },
 };
 
 const WEBPACK_BUILD_CONFIG = _.merge({}, WBBPACK_SRC_CONFIG, {
