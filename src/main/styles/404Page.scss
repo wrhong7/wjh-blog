@@ -1,0 +1,30 @@
+.page-404-container {
+    text-align: center;
+    margin-top: 3em;
+    line-height: 2;
+    font-size: 24px;
+    height: 80vh;
+}
+
+.page-404-homepage-button {
+    font-size: 16px;
+    font-weight: 600;
+    width: 300px;
+    text-align: center;
+    border: solid 1px;
+    margin-left: calc( 50% - 150px );
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    background: #1a1f2d;
+    color: white;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.error-subscript {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}

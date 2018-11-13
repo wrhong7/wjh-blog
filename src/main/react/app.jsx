@@ -17,17 +17,19 @@ import Rpa from "./components/subprojects/rpa.jsx";
 import Comedy from "./components/comedy.jsx";
 import ZeroCollision from "./components/subprojects/zeroCollision.jsx";
 
-import "../styles/blog.scss"
-import "../styles/home.scss"
-import "../styles/library.scss"
-import "../styles/main.scss"
-import "../styles/navbarWeb.scss"
-import "../styles/portfolio.scss"
-import "../styles/principles.scss"
-import "../styles/cureconnectpage.scss"
-import "../styles/comedy.scss"
-import "../styles/rpa.scss"
-import "../resources/proDevMap1.png"
+
+import "../styles/blog.scss";
+import "../styles/home.scss";
+import "../styles/library.scss";
+import "../styles/main.scss";
+import "../styles/navbarWeb.scss";
+import "../styles/portfolio.scss";
+import "../styles/principles.scss";
+import "../styles/cureconnectpage.scss";
+import "../styles/comedy.scss";
+import "../styles/rpa.scss";
+import "../resources/proDevMap1.png";
+import "../styles/404Page.scss";
 
 export default function App (props) {
 
@@ -91,6 +93,21 @@ export default function App (props) {
     return <Comedy/>
   }
 
+  const goToHomepage = () => {
+    window.location.href = '/';
+  };
+
+  const Page404 = ({ location }) => {
+    //404 Page Configuration
+    return <div className="page-404-container">
+      Hi there!<br/>
+      wonjunhong.com{location.pathname} page does not exist.
+      <div className="page-404-homepage-button"
+        onClick={goToHomepage}>Click here to return homepage</div>
+      <div className="error-subscript">*404 Error</div>
+    </div>
+  };
+
   return <BrowserRouter>
     <div id="application-container">
       <div><NavBar/></div>
@@ -110,6 +127,7 @@ export default function App (props) {
           <Route exact path="/portfolio/rpa" component={rpa}/>
           <Route exact path="/portfolio/zeroCollision" component={goToZeroCollision}/>
           <Route exact path="/comedy" component={comedy}/>
+          <Route component={Page404}/>
         </Switch>
     </div>
   </BrowserRouter>;

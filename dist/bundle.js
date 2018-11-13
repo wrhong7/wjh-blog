@@ -34849,6 +34849,8 @@ __webpack_require__(272);
 
 __webpack_require__(21);
 
+__webpack_require__(286);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function App(props) {
@@ -34913,6 +34915,36 @@ function App(props) {
     return _react2.default.createElement(_comedy2.default, null);
   };
 
+  var goToHomepage = function goToHomepage() {
+    window.location.href = '/';
+  };
+
+  var Page404 = function Page404(_ref) {
+    var location = _ref.location;
+
+    //404 Page Configuration
+    return _react2.default.createElement(
+      'div',
+      { className: 'page-404-container' },
+      'Hi there!',
+      _react2.default.createElement('br', null),
+      'wonjunhong.com',
+      location.pathname,
+      ' page does not exist.',
+      _react2.default.createElement(
+        'div',
+        { className: 'page-404-homepage-button',
+          onClick: goToHomepage },
+        'Click here to return homepage'
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'error-subscript' },
+        '*404 Error'
+      )
+    );
+  };
+
   return _react2.default.createElement(
     _reactRouterDom.BrowserRouter,
     null,
@@ -34941,7 +34973,8 @@ function App(props) {
         _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/portfolio/cureconnect/step6', component: goToCureConnect6 }),
         _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/portfolio/rpa', component: rpa }),
         _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/portfolio/zeroCollision', component: goToZeroCollision }),
-        _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/comedy', component: comedy })
+        _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/comedy', component: comedy }),
+        _react2.default.createElement(_reactRouterDom.Route, { component: Page404 })
       )
     )
   );
@@ -56454,6 +56487,25 @@ exports.default = ZeroCollision;
 
 /***/ }),
 /* 272 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 273 */,
+/* 274 */,
+/* 275 */,
+/* 276 */,
+/* 277 */,
+/* 278 */,
+/* 279 */,
+/* 280 */,
+/* 281 */,
+/* 282 */,
+/* 283 */,
+/* 284 */,
+/* 285 */,
+/* 286 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
