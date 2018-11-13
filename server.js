@@ -40,8 +40,8 @@ app.get('/sitemap.xml', function (req, res) {
   });
 });
 
-// app.get("*", function (req, res) {
-//   res.sendFile(path.join(DIST_DIR, "index.html"));
-// });
+app.get("*", function (req, res) {
+  res.sendFile(path.join(DIST_DIR, "index.html"));
+});
 
 app.listen(PORT);

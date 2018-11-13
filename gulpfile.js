@@ -112,10 +112,11 @@ gulp.task('test', function () {
 gulp.task('build', function () {
   return gulp.src(GLOBS.js_jsx)
     .pipe(webpackStream(WEBPACK_BUILD_CONFIG))
+    .pipe(minify())
     .pipe(gulp.dest(BUILD_PATH))
 });
 //
-// gulp.task('compress', function() {
+// BUILD_PATHgulp.task('compress', function() {
 //   gulp.src(GLOBS.js_jsx)
 //     .pipe(minify())
 //     .pipe(gulp.dest('dist'))

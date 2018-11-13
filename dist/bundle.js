@@ -34851,9 +34851,7 @@ __webpack_require__(21);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function App(_ref) {
-  var props = _ref.props;
-
+function App(props) {
 
   var goToLandingPage = function goToLandingPage() {
     return _react2.default.createElement(_home2.default, null);

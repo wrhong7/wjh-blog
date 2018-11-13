@@ -29,7 +29,7 @@ import "../styles/comedy.scss"
 import "../styles/rpa.scss"
 import "../resources/proDevMap1.png"
 
-export default function App ({props}) {
+export default function App (props) {
 
   const goToLandingPage = () => {
     return <Home/>
