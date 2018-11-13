@@ -16,7 +16,7 @@ export default class Home extends React.Component {
 
         <div className="home-background-container-web">
           <img className="home-image-web" id="landing-page-photo-size-for-mobile"
-               src="https://firebasestorage.googleapis.com/v0/b/won-jun-hong-website.appspot.com/o/landpagePhotoHigerRes.jpg?alt=media&token=91348cd2-c278-4bd4-b801-a04f4fe1ed29"/>
+               src="https://firebasestorage.googleapis.com/v0/b/won-jun-hong-website.appspot.com/o/won-jun-hong-vancouver-technology-software-developer-product-manager-entrepreneur.webp?alt=media&token=aaec5c34-95b1-4ee2-90e0-abb83ee22a2b"/>
         </div>
 
         <div className="home-intro-content">

@@ -54,7 +54,14 @@ const WBBPACK_SRC_CONFIG = {
   }, resolve: {
     extensions: ['.js', '.jsx', '.json', '.scss', '.css']
   }, plugins: [
-    new ExtractTextPlugin('bundle.css')
+    new ExtractTextPlugin('bundle.css'),
+    new webpack.DefinePlugin({ //<--key to reduce React's size
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }),
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.UglifyJsPlugin(),
   ],
   optimization: {
     minimize: true,
